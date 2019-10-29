@@ -44,21 +44,35 @@ div {
   <script type="text/javascript" src="bootstrap/js/jquery-3.4.1.min.js"></script> 
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </head>
-	<body>
- 	<font face="arial">
-	  <form method="POST" action = "Post2.php">
-	  	<div  width=120 height=100>
-	  	<img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
-     <h1  style="font-size:300%" >Cadastro para Monitoria Voluntaria</h1>
 
-	   	</div><br>
-      <b>Admin: <input type ="text" name="Admin"  style="width:400;height:40"/></b><br>
-      <b>Senha: <input type ="text" name="Senha"  style="width:400;height:40"/></b><br>
-      <b>esquecer Senha: <input type ="text" name="EsqSenha"  style="width:100;height:20"/></b><br>
-      <br>
-      <br>
-        <input type="submit" value="Login" style="width:90;height:50"> 
+   <body class="text-center">
+     <form class="form-signin">
+    <font face="arial">
+      <form >
+        <div  width=120 height=100>
+        <img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
+       <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
 
+
+      </div><br>
+  <div>
+  <h1 class="h3 mb-3 font-weight-normal">Por favor, inscreva-se</h1>
+  <label for="inputEmail" class="sr-only">Email </label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus><br><br>
+
+  <label for="inputPassword" class="sr-only">Senha</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required><br><br>
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me">Lembre de mim
+  </div>
+</div><br><br>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
+  <p class="mt-5 mb-3 text-muted"></p>
+
+        <div align="right"><footer class="rodape-pagina">
+        <b>&copy; IFCE Campos Acopiara 2019</b>
+    </footer></div>
     </body>
   </html> 
 

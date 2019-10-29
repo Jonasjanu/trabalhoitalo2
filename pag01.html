@@ -1,7 +1,7 @@
 
 <!-- jonas januario da silva -->
 
-<html lang = "pt">
+<html lang = "pt-br">
 <style>
 input[type=text], select {
   width: 100%;
@@ -50,13 +50,13 @@ div {
 	  <form method="POST" action = "geradorPDF.html">
 	  	<div  width=120 height=100>
 	  	<img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
-	   <h1  style="font-size:300%" >Cadastro para Monitoria Voluntaria</h1>
+	   <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
 
 	   	</div><br>
-		<b>Nome Completo: <input type ="text" name="Nome"  style="width:400;height:40"/></b><br>
+		<b>Nome Completo: <input type ="text" name="Nome" placeholder="Nome Completo"  style="width:400;height:40"/></b><br>
 
- <br><b>Matricula: <input type ="number" name="Matricula" style="width:100;height:30"/></b><br>
-	   <br><b>E-mail: <input type ="text" name="email" style="width:400;height:40" /></b><br>
+ <br><b>Matricula: <input type ="number" name="Matricula" placeholder="Matricula" style="width:100;height:30"/></b><br>
+	   <br><b>E-mail: <input type ="text" name="email" placeholder="E-mail"  style="width:400;height:40" /></b><br>
 
 	   <br><b>Curso: <select name="Curso" style="width:400;height:40" >
 	    <option value="cb">Ciencias Biológicas</option>
@@ -73,7 +73,7 @@ div {
 	    <option value="8">8º</option>
 	  </select><br>
 
-	  <br><b>Telefone: <input type ="number" name="Tel" style="width:100;height:30"/></b><br><br>
+	  <br><b>Telefone: <input type ="number" name="Tel" placeholder="Telefone" style="width:100;height:30"/></b><br><br>
 
 
 	  <b>Qual disciplina deseja ser monitor: <select name="Curso"style="width:400;height:40">
@@ -168,7 +168,11 @@ div {
 
 		<br>
 	      <input type="submit" value="Cadatro" style="width:90;height:50"> 
+	  </div><br>
 
+	      <div align="right"><footer class="rodape-pagina">
+        <b>&copy; IFCE Campos Acopiara 2019</b>
+    </footer></div>
 	  </body>
   </html> 
 

@@ -1,6 +1,6 @@
 <!-- jonas januario da silva -->
-
-<html lang = "pt">
+<?php ?>
+<lang = "pt">
 <style>
 input[type=text], select {
   width: 100%;
@@ -69,29 +69,19 @@ div {
           <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
       </div>
 
-<<<<<<< HEAD
+
       <label for="inputPassword" class="sr-only">Senha</label>
       <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required><br><br>
       <a href="">Esquecer senha </a><br>
-=======
-      <div class="form-label-group">
-        <label for="inputPassword">Senha</label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      </div>
-      <a href="P3.html">Esquecer senha </a><br>
-            
 
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me">Lembre de mim
       </div>
     </div><br><br>
-<<<<<<< HEAD
+
         <input type="submit" value="Salvar" style="width:90;height:50"> 
-=======
- <input type="submit" value="Acessar" style="width:90;height:50">
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
+
       <p class="mt-5 mb-3 text-muted"></p>
    
 
@@ -119,4 +109,3 @@ div {
     </body>
   </html> 
 
-<!-- jonas januario da silva  -->

@@ -61,16 +61,12 @@ tr:nth-child(even) {
 </head>
 	<body>
  	<font face="arial">
-	  <form method="POST" action = "Post2.php">
+	  <form method="POST" action = "P19.html">
 	  	<div  width=120 height=100>
 	  	<img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
 	   <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
 
-<<<<<<< HEAD
 <h2>Lista de alunos escritos</h2>
-=======
-<h2>HTML Table</h2>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
 
 <table style="width:80%">
   <tr>
@@ -85,11 +81,11 @@ tr:nth-child(even) {
     <td>987456123</td> 
     <td>5</td>
     <td>@</td>
-<<<<<<< HEAD
-    <td>Não Homologado</td>
-=======
-    <td>Aprovado</td>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
+    <td><select name="periodo" style="width:200;height:40">
+      <option value="Homologado">Homologado</option>
+      <option value="Nao Homologado">Não Homologado</option>
+      <option value="Aprovado">Aprovado</option> 
+      <option value="Nao Aprovado">Não Aprovado</option></td>
 
 </tr>
 
@@ -98,11 +94,11 @@ tr:nth-child(even) {
     <td>123456789</td>
     <td>1</td>
     <td>@</td>
-<<<<<<< HEAD
-    <td>Homologado</td>
-=======
-    <td>Aprovado</td>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
+    <td><select name="periodo" style="width:200;height:40">
+      <option value="Homologado">Homologado</option>
+      <option value="Nao Homologado">Não Homologado</option>
+      <option value="Aprovado">Aprovado</option> 
+      <option value="Nao Aprovado">Não Aprovado</option></td>
 
     </tr>
   
@@ -111,11 +107,11 @@ tr:nth-child(even) {
     <td>357895123</td>
     <td>5</td>
     <td>@</td>
-<<<<<<< HEAD
-    <td>Aprovado</td>
-=======
-    <td>Não Homologado</td>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
+    <td><select name="periodo" style="width:200;height:40">
+      <option value="Homologado">Homologado</option>
+      <option value="Nao Homologado">Não Homologado</option>
+      <option value="Aprovado">Aprovado</option> 
+      <option value="Nao Aprovado">Não Aprovado</option></td>
 
     </tr>
 
@@ -124,11 +120,11 @@ tr:nth-child(even) {
     <td>157423985</td>
     <td>2</td>
     <td>@</td>
-<<<<<<< HEAD
-    <td>Não Homologado</td>
-=======
-    <td>Não Aprovado</td>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
+    <td><select name="periodo" style="width:200;height:40">
+      <option value="Homologado">Homologado</option>
+      <option value="Nao Homologado">Não Homologado</option>
+      <option value="Aprovado">Aprovado</option> 
+      <option value="Nao Aprovado">Não Aprovado</option></td>
 
     </tr>
 
@@ -137,20 +133,26 @@ tr:nth-child(even) {
     <td>258754685</td>
     <td>8</td>
     <td>@</td>
-    <td>Homologado</td>
+    <td><select name="periodo" style="width:200;height:40">
+      <option value="Homologado">Homologado</option>
+      <option value="Nao Homologado">Não Homologado</option>
+      <option value="Aprovado">Aprovado</option> 
+      <option value="Nao Aprovado">Não Aprovado</option></td>
 
     </tr>
   
 <<<<<<< HEAD
 </table><br>
+        <input type="submit" value="Salvar" style="width:90;height:50"> 
     </div><br>
 
         <div align="right"><footer class="rodape-pagina">
         <b>&copy; IFCE Campos Acopiara 2019</b>
     </footer></div>
     </body>
-  </html>
 =======
 </table>
+ <input type="submit" value="Salvar" style="width:90;height:50">
 </body>
 >>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
+  </html>

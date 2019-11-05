@@ -1,6 +1,10 @@
 <!-- jonas januario da silva -->
 
+<<<<<<< HEAD
+<html lang = "pt-br">
+=======
 <html lang = "pt">
+>>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
 <style>
 input[type=text], select {
   width: 100%;
@@ -44,6 +48,19 @@ div {
   <script type="text/javascript" src="bootstrap/js/jquery-3.4.1.min.js"></script> 
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </head>
+<<<<<<< HEAD
+	<body>
+ 	<font face="arial">
+	  <form method="POST" action = "P5.html">
+	  	<div  width=120 height=100>
+	  	<img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
+	   <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
+
+	   	</div><br>
+
+      <div align="right">
+            <a href='P1.html' 
+=======
   <body class="text-center">
      
     
@@ -68,10 +85,22 @@ div {
 
           <div align="right">
             <a href='P11.html' 
+>>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
              >Voltar</a>
           </div>
 
           <div align="center">
+<<<<<<< HEAD
+        <a href="P13.html"> Lista de Cursos </a>
+          </div>
+
+          <div align="center">
+         <a href="P12.html">Alterar Diciplina </a>
+          </div>
+
+          <div align="center">
+          <a href="P14.html">Escrever Disciplina</a>
+=======
         <a href="P13.html">Lista de cursos </a>
           </div>
 
@@ -81,12 +110,17 @@ div {
 
           <div align="center">
           <a href="P14.html">Resultado</a>
+>>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
           </div>
           <br>
            <div align="right"><footer class="rodape-pagina">
            <b>&copy; IFCE Campos Acopiara 2019</b>
         </footer></div>
     </body>
+<<<<<<< HEAD
+  </html> 
+=======
   </html> 
 
 <!-- jonas januario da silva  -->
+>>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e

@@ -59,98 +59,49 @@ tr:nth-child(even) {
   <script type="text/javascript" src="bootstrap/js/jquery-3.4.1.min.js"></script> 
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </head>
-	<body>
- 	<font face="arial">
-	  <form method="POST" action = "Post2.php">
-	  	<div  width=120 height=100>
-	  	<img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
-	   <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
+  <body>
+  <font face="arial">
+    <form method="POST" action = "Post2.php">
+      <div  width=120 height=100>
+      <img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
+     <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
 
-<<<<<<< HEAD
-<h2>Lista de alunos escritos</h2>
-=======
-<h2>HTML Table</h2>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
+<h2>Situação do Alunos</h2>
 
 <table style="width:80%">
   <tr>
     <th>Aluno</th>
-    <th>Matricula</th>
-    <th>Periodo</th>
-    <th>E-mail</th>
     <th>Situação</th>
 
   <tr>
     <td>Maria Anders</td> 
-    <td>987456123</td> 
-    <td>5</td>
-    <td>@</td>
-<<<<<<< HEAD
-    <td>Não Homologado</td>
-=======
     <td>Aprovado</td>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
 
 </tr>
 
     <tr>
     <td>Alfreds Futterkiste</td>
-    <td>123456789</td>
-    <td>1</td>
-    <td>@</td>
-<<<<<<< HEAD
-    <td>Homologado</td>
-=======
     <td>Aprovado</td>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
 
     </tr>
   
     <tr>
     <td>Germany</td>
-    <td>357895123</td>
-    <td>5</td>
-    <td>@</td>
-<<<<<<< HEAD
-    <td>Aprovado</td>
-=======
     <td>Não Homologado</td>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
 
     </tr>
 
     <tr>
     <td>José</td>
-    <td>157423985</td>
-    <td>2</td>
-    <td>@</td>
-<<<<<<< HEAD
-    <td>Não Homologado</td>
-=======
     <td>Não Aprovado</td>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e
 
     </tr>
 
     <tr>
     <td>Carlos</td>
-    <td>258754685</td>
-    <td>8</td>
-    <td>@</td>
     <td>Homologado</td>
 
     </tr>
   
-<<<<<<< HEAD
-</table><br>
-    </div><br>
-
-        <div align="right"><footer class="rodape-pagina">
-        <b>&copy; IFCE Campos Acopiara 2019</b>
-    </footer></div>
-    </body>
-  </html>
-=======
 </table>
 </body>
->>>>>>> 24ddc00bd13025c12436bec3180e6d655a2c808e

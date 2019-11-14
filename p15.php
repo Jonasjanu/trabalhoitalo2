@@ -20,7 +20,12 @@ include 'temp.php'
         <div  width=120 height=100>
     
           <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
-<a > Incrito com sucesso</a>
+           
+<a > Incrito com sucesso</a><br><br>
+
+
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+<span>Finalizar escrição</span></a>
 
 <div class="checkbox mb-3">
         

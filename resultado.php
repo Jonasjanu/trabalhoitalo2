@@ -16,11 +16,12 @@ include 'temp.php'
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </head>
   <body>
-  <font face="arial">
+
+  
     <form method="POST" action = "Post2.php">
       <div  width=120 height=100>
       <img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
-     <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
+     <h1  style="font-size:300%" >resultado </h1>
      
 
 <h2>Situação do Alunos</h2>

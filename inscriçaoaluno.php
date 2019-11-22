@@ -16,12 +16,13 @@
 </head>
  <?php
 include 'temp.php'
-?>
+
+ ?>
 	<body>
 
 <div>
  	<font face="arial">
-	  <form method="POST" action = "P5.html">
+	  <form method="POST" action = "conecta.php">
 	  	<div  width=120 height=100>
 	  	<img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
 	   <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
@@ -50,7 +51,7 @@ include 'temp.php'
 	  <br><b>Telefone: <input type ="number" name="Tel" placeholder="Telefone" style="width:100;height:30"/></b><br><br>
 
 
-	  <b>Qual disciplina deseja ser monitor: <select name="Curso"style="width:400;height:40">
+	  <b>Qual disciplina deseja ser monitor: <select name="disciplina"style="width:400;height:40">
 
 	    <option value="Programação Orientada a Objeto">Programação Orientada a Objeto</option>
 	    <option value="Engenharia de Software">Engenharia de Software</option>
@@ -119,12 +120,12 @@ include 'temp.php'
 
 
 	    <div class="form-group">
-	      <label for="opacao" name="sex">Já foi monitor (a) anteriormente?</label><br><br>
+	      <label for="opacao" name="monitor">Já foi monitor (a) anteriormente?</label><br><br>
 	      
 	        <input type="radio" name="gender" value="SIM" checked > SIM<br><br>
 	        <input type="radio" name="gender" value="NÃO">NÃO<br><br>
 	     
-	      <b>Se sim, no ano de: <select name="Curso" style="width:400;height:40">
+	      <b>Se sim, no ano de: <select name="Ano" style="width:400;height:40">
 	        <option value="2016">2016</option>
 	        <option value="2017">2017</option>
 	        <option value="2018">2018</option>

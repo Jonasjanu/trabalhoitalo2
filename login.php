@@ -52,8 +52,12 @@
                         <label class="custom-control-label" for="customCheck">Lembrar de mim</label>
                       </div>
                     </div>
-                    <a href="index.php" class="btn btn-success btn-user btn-block">
-                      Acessar
+                    <a href="painel.php" class="btn btn-success btn-user btn-block">
+                      Acessar Administrador
+                    </a>
+                    </br>
+                    <a href="avaliar.php" class="btn btn-success btn-user btn-block">
+                      Acessar Professor
                     </a>
                     <hr>
                     

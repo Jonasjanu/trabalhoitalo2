@@ -17,10 +17,10 @@
 
         <div  width=120 height=100 align="center" >
         <br><br><br><br><br><br>
-      <img src="./imagem/ifce.PNG" alt="some text" width=120 height=100 align="right">
+      <img src="./img/ifce.PNG" alt="some text" width=120 height=100 align="right">
      <h1  style="font-size:300%" >Monitoria Voluntaria</h1>
 
-
+     
       <br>
         <p> O sistema foi desenvolvido para facilitar a seleção de alunos em monitorias, professores que participam do programa de monitoria,e Fazer um acompanhamento da seleção agilizando e se tornar menos burocrático o processo de seleção e acompanhamento dos programas de monitoria.
         <p>   O Gerenciador de Monitoria e sistema web que permite o gerenciamento do programa desde a inscrição dos componentes curriculares até o término da monitoria de forma digital facilatando tanto avida dos aluno como dos professores.</p>
@@ -29,6 +29,7 @@
       <br>
           <!-- Page Heading -->
           
+<a href="Documentos/Monitoria_edital.pdf">Edital da Monitoria de 2019.2</a>
 
           <!-- PARTE PRINCIPAL DA PAGINA ONDE DEVE SER ADICIONADO O CONTEUDO-->
 

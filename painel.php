@@ -56,20 +56,24 @@
                       <td>Leandro de Fortaleza</td>
                       <td>Técnico em Informática</td>                      
                       <td>2</td>
-                      <td><select name="acao" class="form-control" required="required" autofocus="autofocus">
-                        <option value="alterar">ALTERAR</option>
-                        <option value="excluir">EXCLUIR</option>
-                      </select></td>
+                      <td> <a href="edisciplina.php" class="btn btn-warning btn-circle">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
+                    <i class="fas fa-trash"></i>
+                  </a></td></td>
                     </tr>
                     <tr>
                       <td>Redes</td>
                       <td>Sávio de Tauá</td>
                       <td>Técnico em Informática</td>                      
                       <td>1</td>
-                      <td><select name="acao" class="form-control" required="required" autofocus="autofocus">
-                        <option value="alterar">ALTERAR</option>
-                        <option value="excluir">EXCLUIR</option>
-                      </select></td>
+                      <td><a href="edisciplina.php" class="btn btn-warning btn-circle">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
+                    <i class="fas fa-trash"></i>
+                  </a></td></td>
                     </tr>                  
                   </tbody>
                 </table>
@@ -109,20 +113,25 @@
                       <td>31295594/td>
                       <td>88-98884743</td>                      
                       <td>savio.taua@ifce.edu.br</td>
-                      <td><select name="acao" class="form-control" required="required" autofocus="autofocus">
-                        <option value="alterar">ALTERAR</option>
-                        <option value="excluir">EXCLUIR</option>
-                      </select></td>
+                      <td><a href="eprofessor.php" class="btn btn-warning btn-circle">
+                    <i class="fas fa-edit"></i>
+                  </a>
+
+                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
+                    <i class="fas fa-trash"></i>
+                  </a></td>
                     </tr>
                     <tr>
                       <td>Leandro de Fortaleza</td>
                       <td>309584834</td>
                       <td>85-983747373</td>                      
                       <td>leandro.fortaleza@ifce.edu.br</td>
-                      <td><select name="acao" class="form-control" required="required" autofocus="autofocus">
-                        <option value="alterar">ALTERAR</option>
-                        <option value="excluir">EXCLUIR</option>
-                      </select></td>
+                      <td><a href="eprofessor.php" class="btn btn-warning btn-circle">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
+                    <i class="fas fa-trash"></i>
+                  </a></td></td>
                     </tr>
                     
                   </tbody>
@@ -153,6 +162,8 @@
   
   <?php include 'template/logout.php' ?>
   
+  <?php include 'template/delete.php' ?>
+
   <?php include 'template/imports.php' ?>
   
   </body>

@@ -5,9 +5,10 @@ echo "
 <ul class='navbar-nav bg-gradient-success sidebar sidebar-dark accordion' id='accordionSidebar'>
 
 <!-- Sidebar - Brand -->
+
 <a class='sidebar-brand d-flex align-items-center justify-content-center' href='index.php'>
   <div class='sidebar-brand-icon rotate-n-15'>
-    <i class='fas fa-laugh-wink'></i>
+    <img src='img/ifceico.png' />
   </div>
   <div class='sidebar-brand-text mx-3'>Sistema de Monitoria</div>
 </a>

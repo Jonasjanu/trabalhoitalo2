@@ -30,7 +30,7 @@ include 'temp.php'
 
  <img src="  https://d3pbdh1dmixop.cloudfront.net/pdfexpert/img/howto/templates/invoice-tpl.png" alt="some text" width=300 height=400 text-align="center"><br>
 
-<a href=''> GERAR PDF</a>
+<a href='ArquivoPDF.php'> GERAR PDF</a>
 
         </body>
         </html> 

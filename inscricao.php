@@ -31,8 +31,8 @@
               <form>
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="firstName">Nome completo</label>
-                    <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required">
+                    <label for="Nome_Completo">Nome completo</label>
+                    <input type="text" id="Nome_Completo" class="form-control" placeholder="Nome completo" required="required">
 
                   </div>
                 </div>
@@ -41,14 +41,14 @@
                   <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="matricula">Matrícula</label>
-                        <input type="number" id="matricula" class="form-control" placeholder="matricula" required="required">
+                        <input type="number" id="Matricula" class="form-control" placeholder="matricula" required="required">
 
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="telefone">Telefone</label>
-                        <input type="number" id="telefone" class="form-control" placeholder="Telefone" required="required">
+                        <input type="number" id="tel" class="form-control" placeholder="Telefone" required="required">
 
                       </div>
                     </div>
@@ -59,7 +59,7 @@
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="inputEmail">Email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required">
+                    <input type="email" id="email" class="form-control" placeholder="Email" required="required">
 
                   </div>
                 </div>
@@ -67,7 +67,7 @@
                 
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="disciplina">Qual disciplina deseja ser monitor:</label>
+                    <label for="cod_disciplina">Qual disciplina deseja ser monitor:</label>
                     <select name="disciplina" class="form-control" required="required" autofocus="autofocus">
 
 	    <option value="Programação Orientada a Objeto">Programação Orientada a Objeto</option>
@@ -151,7 +151,7 @@
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="avaliacao">Período que está matriculado (a):</label>
-                        <select name="periodo" class="form-control" required="required" autofocus="autofocus">
+                        <select name="Periodo" class="form-control" required="required" autofocus="autofocus">
                         <option value="1">1º</option>
                         <option value="2">2º</option>
                         <option value="3">3º</option> 
@@ -170,7 +170,7 @@
                   <div class="form-row">
                     
                     <div class="col-md-3">
-                      <label for="ano">Já foi monitor (a) anteriormente?</label>
+                      <label for="situacao">Já foi monitor (a) anteriormente?</label>
                       <div class="form-label-group">
                     
                         <div class="custom-control custom-radio">
@@ -195,7 +195,7 @@
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="anoM">Se sim, no ano de:</label>
-                        <select name="Curso" class="form-control" required="required" autofocus="autofocus">
+                        <select name="Ano" class="form-control" required="required" autofocus="autofocus">
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
@@ -223,7 +223,7 @@
                 </div>
                 </br>
                 
-                <a class="btn btn-success btn-block" href="protocolo.php">Cadastrar</a>
+                <a class="btn btn-success btn-block" href="conecta.php">Cadastrar</a>
               </form>
               <div class="text-center">
                 <a class="d-block small mt-3" href="index.php">Página Inicial</a>

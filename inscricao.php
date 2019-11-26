@@ -28,12 +28,11 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-              <form>
+              <form action="conecta.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="firstName">Nome completo</label>
                     <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required">
-
                   </div>
                 </div>
                 <div class="form-group">
@@ -223,8 +222,28 @@
                 </div>
                 </br>
                 
-                <a class="btn btn-success btn-block" href="protocolo.php">Cadastrar</a>
+                <input type="submit" class="btn btn-success btn-block" value="Cadastrar" />
               </form>
+              <script>
+// Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+    var forms = document.getElementsByClassName('needs-validation');
+    // Faz um loop neles e evita o envio
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
               <div class="text-center">
                 <a class="d-block small mt-3" href="index.php">Página Inicial</a>
                 

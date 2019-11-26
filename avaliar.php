@@ -70,7 +70,7 @@
                       </select></td>
                     </tr>
                     <tr>
-                      <td>Elizangela do Zap</td>
+                      <td>Elizangela do zap</td>
                       <td>2018RC-03333</td>
                       <td>Técnico em Informática</td>                      
                       <td>Banco de Dados</td>

@@ -10,10 +10,11 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Periodo: " . $row["Periodo"]. " - nome: " . $row["Nome_Completo"]. " E-mail " . $row["E_mail"]. "<br>";
+        echo " - nome: " . $row["Nome_Completo"]."Matricula: " . $row["Matricula"]. "Curso " . $row["Curso"]. "disciplina " . $row["cod_disciplina"]. "situacao " . $row["situacao"]. "<br>";
     }
 } else {
     echo "0 results";
 }
 $conn->close();
 ?>
+

@@ -244,6 +244,7 @@
   }, false);
 })();
 </script>
+
               <div class="text-center">
                 <a class="d-block small mt-3" href="index.php">Página Inicial</a>
                 

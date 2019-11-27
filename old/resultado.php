@@ -24,7 +24,7 @@ include 'temp.php'
      <h1  style="font-size:300%" >resultado </h1>
      
 
-<h2>Situação do Alunos</h2>
+<h2>Situação dos Alunos</h2>
 
 <table style="width:80%">
   <tr>
@@ -32,34 +32,36 @@ include 'temp.php'
     <th>Situação</th>
 
   <tr>
-    <td>Maria Anders</td> 
-    <td>Aprovado</td>
+    <td>Maria Andreza</td> 
+    <td>Aprovada</td>
 
 </tr>
 
     <tr>
-    <td>Alfreds Futterkiste</td>
+    <td>Aristóteles</td>
     <td>Aprovado</td>
 
     </tr>
   
     <tr>
-    <td>Germany</td>
-    <td>Não Homologado</td>
+    <td>Maria Eduarda</td>
+    <td>Aprovada</td>
 
     </tr>
 
     <tr>
-    <td>José</td>
+    <td>José Paulo</td>
     <td>Não Aprovado</td>
 
     </tr>
 
     <tr>
-    <td>Carlos</td>
-    <td>Homologado</td>
+    <td>Carlos Eduardo</td>
+    <td>Aprovado</td>
 
     </tr>
+  
+ <a href="pdf.html">GERAR PDF </a">
   
 </table>
 </body>

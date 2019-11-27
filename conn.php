@@ -1,13 +1,14 @@
 <?php
 
-$servidor="localhost";
-$usuario="root";
-$senha="";
-$baseDeDados="monitoria voluntaria";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "monitoriavoluntaria";
 
-$conexao = new mysqli($servidor,$usuario,$senha,$baseDeDados);
-if ($conexao->connect_error) {
-    die("Connection failed: " . $conexao->connect_error);
-    echo "ERRO NA CONEXÃO!!!";
-}
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
 ?>

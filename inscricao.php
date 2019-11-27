@@ -28,12 +28,11 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-              <form>
+              <form action="conecta.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="firstName">Nome completo</label>
                     <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required">
-
                   </div>
                 </div>
                 <div class="form-group">
@@ -223,8 +222,9 @@
                 </div>
                 </br>
                 
-                <a class="btn btn-success btn-block" href="protocolo.php">Cadastrar</a>
+                <input type="submit" class="btn btn-success btn-block" value="Cadastrar" />
               </form>
+            
               <div class="text-center">
                 <a class="d-block small mt-3" href="index.php">Página Inicial</a>
                 

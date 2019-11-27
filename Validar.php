@@ -28,7 +28,7 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-              <form>
+              <form action="situacao.php" method="Post">
                 
                 <div class="form-group">
                   <div class="form-row">
@@ -53,7 +53,8 @@
                 
                 
                 
-                <a class="btn btn-success btn-block" href="situacao.php">Validar</a>
+                <input type="submit" class="btn btn-success btn-block" value="Validar" />
+              
               </form>
               
               </div></div>

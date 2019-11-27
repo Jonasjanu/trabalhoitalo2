@@ -28,7 +28,7 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-              <form>
+             <form action="index.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                   <label for="curso">Curso:</label>
@@ -138,10 +138,10 @@
                   </div>
                 </div>
                 
-                <a class="btn btn-success btn-block" href="painel.php">Cadastrar</a>
+                 <input type="submit" class="btn btn-success btn-block" value="Cadastrar" />
               </form>
               <div class="text-center">
-                <a class="d-block small mt-3" href="index.php">Página Inicial</a>
+               
                 
               </div>
             </div>

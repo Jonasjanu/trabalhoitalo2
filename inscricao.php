@@ -28,26 +28,26 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-              <form action="conecta.php" method="Post">
+              <form action="inseriraluno.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="firstName">Nome completo</label>
-                    <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required">
+                    <label for="Nome_Completo">Nome completo</label>
+                    <input type="text" name="Nome_Completo" class="form-control" placeholder="Nome completo" required="required">
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="form-row">
                   <div class="col-md-6">
                       <div class="form-label-group">
-                        <label for="matricula">Matrícula</label>
-                        <input type="number" id="matricula" class="form-control" placeholder="matricula" required="required">
+                        <label for="Matricula">Matricula</label>
+                        <input type="number" id="Matricula" class="form-control" placeholder="Matricula" required="required">
 
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-label-group">
-                        <label for="telefone">Telefone</label>
-                        <input type="number" id="telefone" class="form-control" placeholder="Telefone" required="required">
+                        <label for="Telefone">Telefone</label>
+                        <input type="number" name="Telefone" class="form-control" placeholder="Telefone" required="required">
 
                       </div>
                     </div>
@@ -57,8 +57,8 @@
                 
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="inputEmail">Email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required">
+                    <label for="E_mail">Email</label>
+                    <input type="email" name="E_mail" class="form-control" placeholder="E_mail" required="required">
 
                   </div>
                 </div>
@@ -67,7 +67,7 @@
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="disciplina">Qual disciplina deseja ser monitor:</label>
-                    <select name="disciplina" class="form-control" required="required" autofocus="autofocus">
+                    <select name="cod_disciplina" class="form-control" required="required" autofocus="autofocus">
 
 	    <option value="Programação Orientada a Objeto">Programação Orientada a Objeto</option>
 	    <option value="Engenharia de Software">Engenharia de Software</option>
@@ -140,7 +140,7 @@
                   <div class="form-row">
                     <div class="col-md-6">
                       <div class="form-label-group">
-                        <label for="inicio">Curso:</label>
+                        <label for="Curso">Curso:</label>
                         <select name="Curso" class="form-control" required="required" autofocus="autofocus">
                         <option value="cb">Ciencias Biológicas</option>
                         <option value="ti">Técnico em Informatica</option>
@@ -150,7 +150,7 @@
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="avaliacao">Período que está matriculado (a):</label>
-                        <select name="periodo" class="form-control" required="required" autofocus="autofocus">
+                        <select name="Periodo" class="form-control" required="required" autofocus="autofocus">
                         <option value="1">1º</option>
                         <option value="2">2º</option>
                         <option value="3">3º</option> 
@@ -173,7 +173,7 @@
                       <div class="form-label-group">
                     
                         <div class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" id="sim" name="ano" checked>
+                          <input type="radio" class="custom-control-input" id="sim" name="situacao" checked>
                           <label class="custom-control-label" for="sim">SIM</label>
                         </div>
                       </div>
@@ -185,7 +185,7 @@
                       </br>
                         <div class="custom-control custom-radio"> 
                           </br>
-                          <input type="radio" class="custom-control-input" id="nao" name="ano">
+                          <input type="radio" class="custom-control-input" id="nao" name="situacao">
                           <label class="custom-control-label" for="nao">NÃO</label>
                         </div>
                       </div>
@@ -194,7 +194,7 @@
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="anoM">Se sim, no ano de:</label>
-                        <select name="Curso" class="form-control" required="required" autofocus="autofocus">
+                        <select name="Ano" class="form-control" required="required" autofocus="autofocus">
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>

@@ -57,55 +57,39 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                    <tr>
-                      <td>Jonas de Acopiara</td>
-                      <td>2018RC-0225</td>
-                      <td>Técnico em Informática</td>                      
-                      <td>Banco de Dados</td>
-                      <td><select name="Curso" class="form-control" required="required" autofocus="autofocus">
-                        <option value="A">APROVADO</option>
-                        <option value="NA">NÃO APROVADO</option>
-                        <option value="H">HOMOLOGADO</option>
-                        <option value="NH">NÃO HOMOLOGADO</option>
-                      </select></td>
-                    </tr>
-                    <tr>
-                      <td>Elizangela do zap</td>
-                      <td>2018RC-03333</td>
-                      <td>Técnico em Informática</td>                      
-                      <td>Banco de Dados</td>
-                      <td><select name="Curso" class="form-control" required="required" autofocus="autofocus">
-                        <option value="A">APROVADO</option>
-                        <option value="NA">NÃO APROVADO</option>
-                        <option value="H">HOMOLOGADO</option>
-                        <option value="NH">NÃO HOMOLOGADO</option>
-                      </select></td>
-                    </tr>
-                    <tr>
-                      <td>Luana da Dança</td>
-                      <td>2018RC-3245</td>
-                      <td>Técnico em Informática</td>                      
-                      <td>Banco de Dados</td>
-                      <td><select name="Curso" class="form-control" required="required" autofocus="autofocus">
-                        <option value="A">APROVADO</option>
-                        <option value="NA">NÃO APROVADO</option>
-                        <option value="H">HOMOLOGADO</option>
-                        <option value="NH">NÃO HOMOLOGADO</option>
-                      </select></td>
-                    </tr>
-                    <tr>
-                      <td>Luciana da Educação</td>
-                      <td>2018RC-4355</td>
-                      <td>Técnico em Informática</td>                      
-                      <td>Banco de Dados</td>
-                      <td><select name="Curso" class="form-control" required="required" autofocus="autofocus">
-                        <option value="A">APROVADO</option>
-                        <option value="NA">NÃO APROVADO</option>
-                        <option value="H">HOMOLOGADO</option>
-                        <option value="NH">NÃO HOMOLOGADO</option>
-                      </select></td>
-                    </tr>
-                  </tbody>
+                  <?php
+
+ // Criando Conexão
+include 'conn.php';
+
+//--------------Listando dados--------------------------
+$sql = "SELECT * FROM aluno";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+       echo "<tr>
+                      <td>".$row["Nome_Completo"]."</td>
+                      <td>". $row["Matricula"]."</td>
+                      <td>". $row["Curso"]. "</td>                      
+                      <td>" . $row["cod_disciplina"].".</td>
+                      <td>". $row["situacao"]."</td>   
+                      <td><select name='Curso' class='form-control' required='required' autofocus='autofocus'>
+                          <option value='A'>APROVADO</option>
+                          <option value='NA'>NÃO APROVADO</option>
+                          <option value='H'>HOMOLOGADO</option>
+                          <option value='NH'>NÃO HOMOLOGADO</option>
+                        </select></td>
+                      </tr>";
+
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
                 </table>
               </div>
             </div>

@@ -1,11 +1,17 @@
 <?php
 
+ // Criando Conexão
 include 'conn.php';
 
-include 'inseriraluno.php'
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-$sql ="INSERT INTO aluno(Periodo, cod_disciplina, Codigo, Nome_Completo, Matricula, E_mail, situacao,Ano, Curso, Telefone) VALUES 
-			'$_POST[Nome_Completo]',
+$sql = "INSERT INTO aluno (Nome_Completo,Matricula,E_mail, Periodo, Telefone,cod_disciplina, situacao,Curso, Ano)
+VALUES ('$_POST[Nome_Completo]',
 			'$_POST[Matricula]',
 			'$_POST[E_mail]',
 			'$_POST[Periodo]',
@@ -15,9 +21,12 @@ $sql ="INSERT INTO aluno(Periodo, cod_disciplina, Codigo, Nome_Completo, Matricu
 			'$_POST[Curso]',
 			'$_POST[Ano]')";
 
-if ($conexao->query($sql) === TRUE) {
-			    echo "Novo registrado criado com sucesso!<br> ";
-			} else {
-			    echo "Error: " . $sql . "<br>" . $conexao->error;
-			}
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+
 ?>

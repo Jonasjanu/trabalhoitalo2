@@ -50,7 +50,10 @@
                       <th>Ação</th>
                     </tr>
                   </tfoot>
+
+
                   <tbody>
+
                     <tr>
                       <td>Banco de Dados</td>
                       <td>Leandro de Fortaleza</td>
@@ -108,32 +111,36 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                    <tr>
-                      <td>Savio de Tauá</td>
-                      <td>31295594/td>
-                      <td>88-98884743</td>                      
-                      <td>savio.taua@ifce.edu.br</td>
-                      <td><a href="eprofessor.php" class="btn btn-warning btn-circle">
-                    <i class="fas fa-edit"></i>
+                    <?php   include 'conn.php';
+
+//--------------Listando dados--------------------------
+$sql = "SELECT * FROM professor";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>
+                      <td>" .$row["Nome"]."</td>
+                      <td>". $row["Siape"]."</td>
+                      <td>". $row["Telefone"]. "</td>                      
+                      <td>" . $row["E_mail"].".</td>
+                   
+
+                    <td><a href='eprofessor.php' class='btn btn-warning btn-circle'>
+                    <i class='fas fa-edit'></i>
                   </a>
 
                   <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
-                    <i class="fas fa-trash"></i>
-                  </a></td>
-                    </tr>
-                    <tr>
-                      <td>Leandro de Fortaleza</td>
-                      <td>309584834</td>
-                      <td>85-983747373</td>                      
-                      <td>leandro.fortaleza@ifce.edu.br</td>
-                      <td><a href="eprofessor.php" class="btn btn-warning btn-circle">
-                    <i class="fas fa-edit"></i>
-                  </a>
-                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
-                    <i class="fas fa-trash"></i>
-                  </a></td></td>
-                    </tr>
-                    
+                    <i class='fas fa-trash'></i>
+                  </a></td> </tr>";
+    }
+                  
+      } else {
+    echo "0 results";
+}
+$conn->close();
+?>
                   </tbody>
                 </table>
               </div>

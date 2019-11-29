@@ -121,10 +121,10 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<tr>
-                      <td>" .$row["Nome"]."</td>
-                      <td>". $row["Siape"]."</td>
-                      <td>". $row["Telefone"]. "</td>                      
-                      <td>" . $row["E_mail"].".</td>
+                      <td>" .$row["nome"]."</td>
+                      <td>". $row["siape"]."</td>
+                      <td>". $row["telefone"]. "</td>                      
+                      <td>" . $row["e_mail"].".</td>
                    
 
                     <td><a href='eprofessor.php' class='btn btn-warning btn-circle'>

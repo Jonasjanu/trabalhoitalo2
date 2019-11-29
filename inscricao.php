@@ -32,7 +32,7 @@
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="Nome_Completo">Nome completo</label>
-                    <input type="text" name="Nome_Completo" class="form-control" placeholder="Nome completo" required="required">
+                    <input type="text" name="nome_completo" class="form-control" placeholder="Nome completo" required="required">
                   </div>
                 </div>
                 <div class="form-group">
@@ -40,14 +40,14 @@
                   <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="Matricula">Matricula</label>
-                        <input type="number" id="Matricula" class="form-control" placeholder="Matricula" required="required">
+                        <input type="number" name="matricula" class="form-control" placeholder="Matricula" required="required">
 
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="Telefone">Telefone</label>
-                        <input type="number" name="Telefone" class="form-control" placeholder="Telefone" required="required">
+                        <input type="number" name="telefone" class="form-control" placeholder="Telefone" required="required">
 
                       </div>
                     </div>
@@ -58,7 +58,7 @@
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="E_mail">Email</label>
-                    <input type="email" name="E_mail" class="form-control" placeholder="E_mail" required="required">
+                    <input type="email" name="e_mail" class="form-control" placeholder="E_mail" required="required">
 
                   </div>
                 </div>
@@ -141,7 +141,7 @@
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="Curso">Curso:</label>
-                        <select name="Curso" class="form-control" required="required" autofocus="autofocus">
+                        <select name="curso" class="form-control" required="required" autofocus="autofocus">
                         <option value="cb">Ciencias Biológicas</option>
                         <option value="ti">Técnico em Informatica</option>
                       </select>
@@ -150,7 +150,7 @@
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="avaliacao">Período que está matriculado (a):</label>
-                        <select name="Periodo" class="form-control" required="required" autofocus="autofocus">
+                        <select name="periodo" class="form-control" required="required" autofocus="autofocus">
                         <option value="1">1º</option>
                         <option value="2">2º</option>
                         <option value="3">3º</option> 
@@ -194,7 +194,7 @@
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="anoM">Se sim, no ano de:</label>
-                        <select name="Ano" class="form-control" required="required" autofocus="autofocus">
+                        <select name="ano" class="form-control" required="required" autofocus="autofocus">
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>

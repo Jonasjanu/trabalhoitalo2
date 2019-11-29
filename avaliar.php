@@ -70,16 +70,16 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
        echo "<tr>
-                      <td>".$row["Nome_Completo"]."</td>
-                      <td>". $row["Matricula"]."</td>
-                      <td>". $row["Curso"]. "</td>                      
+                      <td>".$row["nome_completo"]."</td>
+                      <td>". $row["matricula"]."</td>
+                      <td>". $row["curso"]. "</td>                      
                       <td>" . $row["cod_disciplina"].".</td>
                       <td>". $row["situacao"]."</td>   
-                      <td><select name='Curso' class='form-control' required='required' autofocus='autofocus'>
-                          <option value='A'>APROVADO</option>
-                          <option value='NA'>NÃO APROVADO</option>
-                          <option value='H'>HOMOLOGADO</option>
-                          <option value='NH'>NÃO HOMOLOGADO</option>
+                      <td><select name='curso' class='form-control' required='required' autofocus='autofocus'>
+                          <option value='a'>aprovado</option>
+                          <option value='na'>não aprovado</option>
+                          <option value='h'>homologado</option>
+                          <option value='nh'>não homologado</option>
                         </select></td>
                       </tr>";
 

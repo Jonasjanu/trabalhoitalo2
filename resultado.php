@@ -60,9 +60,9 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<tr>
-                      <td>" .$row["Nome_Completo"]."</td>
-                      <td>". $row["Matricula"]."</td>
-                      <td>". $row["Curso"]. "</td>                      
+                      <td>" .$row["nome_completo"]."</td>
+                      <td>". $row["matricula"]."</td>
+                      <td>". $row["curso"]. "</td>                      
                       <td>" . $row["cod_disciplina"].".</td>
                       <td>" . $row["situacao"]. "</td>
                     </tr>";

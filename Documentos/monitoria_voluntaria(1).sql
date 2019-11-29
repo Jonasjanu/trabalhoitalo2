@@ -68,7 +68,7 @@ alter table `curso`
 -- limitadores para a tabela `disciplina`
 --
 alter table `disciplina`
-  add constraint `fk_disciplina_1` foreign key (`fk_cod_curso`) references `curso` (`codigo`) on delete cascade;
+  add constraint `fk_disciplina_1` foreign key (`fk_cod_curso`) references `curso` (`codigo`) ;
 
 
 --

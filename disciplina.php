@@ -33,8 +33,8 @@
                   <div class="form-label-group">
                   <label for="curso">Curso:</label>
                         <select name="Curso" class="form-control" required="required" autofocus="autofocus">
-                        <option value="cb">Ciencias Biológicas</option>
-                        <option value="ti">Técnico em Informatica</option>
+                        <option value="Ciencias_Biológicas">Ciencias_Biológicas</option>
+                        <option value="Informatica">Técnico em Informatica</option>
                       </select>
                   </div>
                 </div>

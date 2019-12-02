@@ -28,11 +28,11 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-              <form action="painel.php" method="Post">
+              <form action="insireprof.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="firstName">Nome completo</label>
-                    <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" class="form-control" placeholder="Nome completo" required="required">
 
                   </div>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="inputEmail">Email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required">
+                    <input type="email" id="e_mail" class="form-control" placeholder="Email" required="required">
 
                   </div>
                 </div>
@@ -68,9 +68,7 @@
                 
                <input type="submit" class="btn btn-success btn-block" value="Cadastrar" />
               </form>
-              <div class="text-center">
-               <input type="submit" class="btn btn-success btn-block" value="Cadastrar" />
-                
+             
               </div>
             </div>
           </div>

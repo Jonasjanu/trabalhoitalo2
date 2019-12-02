@@ -84,8 +84,8 @@ if ($result->num_rows > 0) {
                       <td>" . $row["codigo"].".</td>
                            </tr>";
     }
-                      //<td>" . $row["situacao"]. "</td>
-                    //</tr>;
+                    <td>" . $row["situacao"]. "</td>
+                    </tr>;
                   
       } else {
     echo "0 results";

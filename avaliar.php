@@ -57,37 +57,36 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                  <?php
+           
 
  // Criando Conexão
-include 'conn.php';
+ <?php   include 'conn.php';
 
 //--------------Listando dados--------------------------
-$sql = "SELECT * FROM aluno";
+$sql = "SELECT * FROM `inscricao` INNER JOIN disciplina ON fk_disciplina_codigo = disciplina.codigo INNER JOIN aluno ON fk_aluno_codigo = aluno.codigo ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       echo "<tr>
-                      <td>".$row["nome_completo"]."</td>
+        echo "<tr>
+                      <td>" .$row["nome_completo"]."</td>
                       <td>". $row["matricula"]."</td>
-                      <td>". $row["curso"]. "</td>                      
-                      <td>" . $row["cod_disciplina"].".</td>
-                      <td>". $row["situacao"]."</td>   
-                      <td><select name='curso' class='form-control' required='required' autofocus='autofocus'>
-                          <option value='a'>aprovado</option>
-                          <option value='na'>não aprovado</option>
-                          <option value='h'>homologado</option>
-                          <option value='nh'>não homologado</option>
-                        </select></td>
+                      <td>". $row["curso"]. "</td>
+                      <td>" . $row["nome"].".</td>
+                      <td>" . $row["situacao"]. "</td>
                       </tr>";
-
     }
-} else {
+                    
+
+                  
+      } else {
     echo "0 results";
 }
 $conn->close();
+
+//--------------Listando dados--------------------------
+
 ?>
 
                 </table>

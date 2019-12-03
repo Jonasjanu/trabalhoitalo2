@@ -53,7 +53,7 @@
                  <?php   include 'conn.php';
 
 //--------------Listando dados--------------------------
-$sql = "SELECT * FROM aluno";
+$sql = "SELECT * FROM `inscricao` INNER JOIN disciplina ON fk_disciplina_codigo = disciplina.codigo INNER JOIN aluno ON fk_aluno_codigo = aluno.codigo ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -63,8 +63,12 @@ if ($result->num_rows > 0) {
                       <td>" .$row["nome_completo"]."</td>
                       <td>". $row["matricula"]."</td>
                       <td>". $row["curso"]. "</td>
-                      </tr>"; 
+                      <td>" . $row["nome"].".</td>
+                      <td>" . $row["situacao"]. "</td>
+                      </tr>";
     }
+                    
+
                   
       } else {
     echo "0 results";
@@ -72,25 +76,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 
 //--------------Listando dados--------------------------
-$sql = "SELECT * FROM disciplina";
 
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<tr>
-
-                      <td>" . $row["codigo"].".</td>
-                           </tr>";
-    }
-                    <td>" . $row["situacao"]. "</td>
-                    </tr>;
-                  
-      } else {
-    echo "0 results";
-}
-$conn->close();
 ?>
                   </tbody>
                 </table>

@@ -28,11 +28,11 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-             <form action="index.php" method="Post">
+             <form action="inserirprof.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                   <label for="curso">Curso:</label>
-                        <select name="Curso" class="form-control" required="required" autofocus="autofocus">
+                        <select name="" class="form-control" required="required" autofocus="autofocus">
                         <option value="Ciencias_Biológicas">Ciencias_Biológicas</option>
                         <option value="Informatica">Técnico em Informatica</option>
                       </select>
@@ -41,8 +41,8 @@
                 
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="disciplina">Disciplina:</label>
-                    <select name="disciplina" class="form-control" required="required" autofocus="autofocus">
+                    <label for="nome">Disciplina:</label>
+                    <select name="nome" class="form-control" required="required" autofocus="autofocus">
 
 	    <option value="Programação Orientada a Objeto">Programação Orientada a Objeto</option>
 	    <option value="Engenharia de Software">Engenharia de Software</option>
@@ -116,8 +116,8 @@
                   <div class="form-row">
                     <div class="col-md-6">
                       <div class="form-label-group">
-                      <label for="firstName">Nome do Professor</label>
-                    <input type="text" id="firstName" class="form-control" placeholder="Nome completo" required="required">
+                      <label for="nomeprofessor">Nome do Professor</label>
+                    <input type="text" id="nomeprofessor" class="form-control" placeholder="Nome completo" required="required">
                       </div>
                     </div>
                     <div class="col-md-6">

@@ -53,31 +53,39 @@
 
 
                   <tbody>
+<?php   include 'conn.php';
 
-                    <tr>
-                      <td>Banco de Dados</td>
-                      <td>Leandro de Fortaleza</td>
-                      <td>Técnico em Informática</td>                      
-                      <td>2</td>
-                      <td> <a href="edisciplina.php" class="btn btn-warning btn-circle">
+//--------------Listando dados--------------------------
+$sql = "SELECT * FROM disciplina";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>
+                      <td>" .$row["nome"]."</td>
+                      <td>". $row["nome_professor"]."</td>
+                      <td>". $row["telefone"]. "</td>                      
+                      <td>" . $row["e_mail"].".</td>
+                   
+SELECT `codigo`, `nome`, `fk_curso_codigo`, `nome_professor`, `periodo`, `vagas` FROM `disciplina` WHERE 1
+                    
+                       <td><a href="edisciplina.php" class="btn btn-warning btn-circle">
                     <i class="fas fa-edit"></i>
                   </a>
                   <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
                     <i class="fas fa-trash"></i>
                   </a></td></td>
-                    </tr>
-                    <tr>
-                      <td>Redes</td>
-                      <td>Sávio de Tauá</td>
-                      <td>Técnico em Informática</td>                      
-                      <td>1</td>
-                      <td><a href="edisciplina.php" class="btn btn-warning btn-circle">
-                    <i class="fas fa-edit"></i>
-                  </a>
-                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
-                    <i class="fas fa-trash"></i>
-                  </a></td></td>
-                    </tr>                  
+                    </tr>   "
+
+                  
+                  
+      } else {
+    echo "0 results";
+}
+$conn->close();
+?>
+                                
                   </tbody>
                 </table>
               </div>

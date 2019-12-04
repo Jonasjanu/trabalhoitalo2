@@ -28,7 +28,7 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-              <form action="insireprof.php" method="Post">
+              <form action="inserirprof.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="nome">Nome completo</label>
@@ -58,8 +58,8 @@
                 
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="inputEmail">Email</label>
-                    <input type="email" id="e_mail" class="form-control" placeholder="Email" required="required">
+                    <label for="e_mail">Email</label>
+                    <input type="e_mail" id="e_mail" class="form-control" placeholder="Email" required="required">
 
                   </div>
                 </div>

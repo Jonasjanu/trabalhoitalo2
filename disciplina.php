@@ -28,11 +28,11 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-             <form action="inserirprof.php" method="Post">
+             <form action="inserirdiciplina.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                   <label for="curso">Curso:</label>
-                        <select name="" class="form-control" required="required" autofocus="autofocus">
+                        <select name="curso" class="form-control" required="required" autofocus="autofocus">
                         <option value="Ciencias_Biológicas">Ciencias_Biológicas</option>
                         <option value="Informatica">Técnico em Informatica</option>
                       </select>
@@ -116,7 +116,7 @@
                   <div class="form-row">
                     <div class="col-md-6">
                       <div class="form-label-group">
-                      <label for="nomeprofessor">Nome do Professor</label>
+                      <label for="nome_professor">Nome do Professor</label>
                     <input type="text" id="nomeprofessor" class="form-control" placeholder="Nome completo" required="required">
                       </div>
                     </div>

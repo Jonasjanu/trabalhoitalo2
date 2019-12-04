@@ -31,8 +31,8 @@
               <form>
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="firstName">Nome completo</label>
-                    <input type="text" id="firstName" class="form-control" value="Leandro de Fortaleza" placeholder="Nome completo" required="required">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" class="form-control" value="Leandro de Fortaleza" placeholder="Nome completo" required="required">
 
                   </div>
                 </div>

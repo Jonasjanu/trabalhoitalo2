@@ -10,11 +10,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO disciplina(nome,  nomeprofessor, periodo) VALUES 
- VALUES ('$_POST[nome]',
-			'$_POST[nomeprofessor]',
+$sql = "INSERT INTO aluno(nome_completo, matricula, e_mail, periodo, telefone, curso,  INSERT INTO `professor`(`codigo`, `nome`, `telefone`, `siape`, `e_mail`) values ([value-1],[value-2],[value-3],[value-4],[value-5])
+			('$_POST[nome_completo]',
+			'$_POST[matricula]',
+			'$_POST[e_mail]',
 			'$_POST[periodo]',
-			)";
+			'$_POST[telefone]',
+			'$_POST[curso]',
+			'$_POST[ano]')";
 
 
 if ($conn->query($sql) === TRUE) {

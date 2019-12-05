@@ -41,8 +41,8 @@
                 
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="nome">Disciplina:</label>
-                    <select name="nome" class="form-control" required="required" autofocus="autofocus">
+                    <label for="disciplina">Disciplina:</label>
+                    <select name="disciplina" class="form-control" required="required" autofocus="autofocus">
 
 	    <option value="Programação Orientada a Objeto">Programação Orientada a Objeto</option>
 	    <option value="Engenharia de Software">Engenharia de Software</option>
@@ -117,13 +117,13 @@
                     <div class="col-md-6">
                       <div class="form-label-group">
                       <label for="nome_professor">Nome do Professor</label>
-                    <input type="text" id="nomeprofessor" class="form-control" placeholder="Nome completo" required="required">
+                    <input type="text" name="nome_professor" id="nome_professor" class="form-control" placeholder="Nome completo" required="required">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="avaliacao">Vagas:</label>
-                        <select name="periodo" class="form-control" required="required" autofocus="autofocus">
+                        <select name="vagas" class="form-control" required="required" autofocus="autofocus">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option> 

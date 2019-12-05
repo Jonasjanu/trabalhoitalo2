@@ -38,10 +38,13 @@ CREATE TABLE `administrador` (
 -- Extraindo dados da tabela `administrador`
 
 CREATE TABLE `aluno` (
-  `periodo` int(3) NOT NULL,
   `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `periodo` int(3) NOT NULL,
   `nome_completo` varchar(250) NOT NULL,
   `matricula` int(10) NOT NULL,
+  `telefone` int(10) NOT NULL,
+  `curso` varchar(250) NOT NULL,
+  `ano` int(10) NOT NULL,
   `e_mail` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -51,12 +54,23 @@ CREATE TABLE `curso` (
   `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `professor` (
+  `nome` varchar(250) NOT NULL,
+  `telefone` int(15) DEFAULT NULL,
+  `siape` int(10) NOT NULL,
+  `e_mail` varchar(250) NOT NULL,
+  `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 CREATE TABLE `disciplina` (
   `nome` varchar(50) NOT NULL,
   `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `fk_curso_codigo` int NOT NULL,
-   FOREIGN KEY (fk_curso_codigo) REFERENCES curso(codigo)
+  `fk_professor_codigo` int NOT NULL,
+   FOREIGN KEY (fk_curso_codigo) REFERENCES curso(codigo),
+  FOREIGN KEY (fk_professor_codigo) REFERENCES professor(codigo)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
@@ -72,13 +86,6 @@ CREATE TABLE `inscricao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE `professor` (
-  `nome` varchar(250) NOT NULL,
-  `telefone` int(15) DEFAULT NULL,
-  `siape` int(10) NOT NULL,
-  `e_mail` varchar(250) NOT NULL,
-  `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 CREATE TABLE `professor_disciplina` (

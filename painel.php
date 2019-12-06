@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
   
  <?php include 'template/cabecalho.php' ?>
  <?php include 'template/menu-lateral.php' ?>
@@ -8,7 +9,7 @@
     <div id='content-wrapper' class='d-flex flex-column'>
 
       <!-- Main Content -->
-      <div id='content'>
+      <div id='content' meta= charset=utf-8>
 
       <?php include 'template/menu-superior.php' ?>       
 
@@ -52,39 +53,45 @@
                   </tfoot>
 
 
-                  <tbody>
+                  <tbody charset=utf-8>
 <?php   include 'conn.php';
 
+
+
+
+$sql = "SELECT d.nome as 'disciplina', p.nome as 'professor', c.nome as curso , d.vagas as 'vagas' , i.fk_disciplina_codigo, d.codigo, i.fk_curso_codigo, c.codigo FROM disciplina d ,professor p,curso c , professor_disciplina pd WHERE i.fk_aluno_codigo = a.codigo and i.fk_situacao_codigo = s.codigo and i.fk_disciplina_codigo = d.codigo and i.fk_curso_codigo = c.codigo";
+
+
 //--------------Listando dados--------------------------
-$sql = "SELECT * FROM disciplina";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<tr>
-                      <td>" .$row["nome"]."</td>
-                      <td>". $row["nome_professor"]."</td>
-                      <td>". $row["telefone"]. "</td>                      
-                      <td>" . $row["e_mail"].".</td>
+                      
+                      <td>". $row["disciplina"]."</td>
+                      <td>". $row["nome_professor"]. "
+                      <td>" .$row["curso"]."</td>
+                      <td>" . $row["vagas"].".</td>
                    
-SELECT `codigo`, `nome`, `fk_curso_codigo`, `nome_professor`, `periodo`, `vagas` FROM `disciplina` WHERE 1
-                    
-                       <td><a href="edisciplina.php" class="btn btn-warning btn-circle">
-                    <i class="fas fa-edit"></i>
-                  </a>
-                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
-                    <i class="fas fa-trash"></i>
-                  </a></td></td>
-                    </tr>   "
 
-                  
+                    <td><a href='edisciplina.php' class='btn btn-warning btn-circle'>
+                    <i class='fas fa-edit'></i>
+                  </a>
+
+                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
+                    <i class='fas fa-trash'></i>
+                  </a></td> </tr>";
+    }
                   
       } else {
     echo "0 results";
 }
 $conn->close();
 ?>
+
+
                                 
                   </tbody>
                 </table>

@@ -3,6 +3,12 @@
  // Criando Conexão
 include 'conn.php';
 
+
+$nome= $_POST['nome'];
+$siapesiape =$_POST['siape'];
+$telefone=$_POST['telefone'];
+$e_maile_mail=$_POST['e_mail'];
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -10,14 +16,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO aluno(nome_completo, matricula, e_mail, periodo, telefone, curso,  INSERT INTO `professor`(`codigo`, `nome`, `telefone`, `siape`, `e_mail`) values ([value-1],[value-2],[value-3],[value-4],[value-5])
-			('$_POST[nome_completo]',
-			'$_POST[matricula]',
-			'$_POST[e_mail]',
-			'$_POST[periodo]',
+$sql = "INSERT INTO aluno(nome, telefone, siape, e_mail, codigo,  
+			('$_POST[nome]',
+			'$_POST[siape]',
 			'$_POST[telefone]',
-			'$_POST[curso]',
-			'$_POST[ano]')";
+			'$_POST[e_mail]',)";
 
 
 if ($conn->query($sql) === TRUE) {

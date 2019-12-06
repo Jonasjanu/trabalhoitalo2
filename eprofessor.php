@@ -28,11 +28,11 @@
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-              <form>
+              <form action="updateprof.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="nome">Nome completo</label>
-                    <input type="text" id="nome" class="form-control" value="Leandro de Fortaleza" placeholder="Nome completo" required="required">
+                    <input type="text" id="nome" name="nome" class="form-control"  placeholder="Nome completo" required="required">
 
                   </div>
                 </div>
@@ -41,14 +41,15 @@
                   <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="siape">SIAPE</label>
-                        <input type="number" id="siape" class="form-control" placeholder="siape" value="123544356" required="required">
+                        <input type="number" id="siape"
+                        name="siape" class="form-control" placeholder="siape" required="required">
 
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="telefone">Telefone</label>
-                        <input type="number" id="telefone" class="form-control" placeholder="Telefone" value="88998787234" required="required">
+                        <input type="number" id="telefone" name="telefone" class="form-control" placeholder="Telefone"  required="required">
 
                       </div>
                     </div>
@@ -58,15 +59,15 @@
                 
                 <div class="form-group">
                   <div class="form-label-group">
-                    <label for="inputEmail">Email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" value="leandro.fortaleza@ifce.edu.br" required="required">
+                    <label for="e_mail">Email</label>
+                    <input type="email" id="e_mail" name="e_mail" class="form-control" placeholder="Email"  required="required">
 
                   </div>
                 </div>
 
  
                 
-                <a class="btn btn-success btn-block" href="painel.php">Alterar</a>
+                <input type="submit" class="btn btn-success btn-block" value="Alterar">
               </form>
               <div class="text-center">
                 <a class="d-block small mt-3" href="index.php">Página Inicial</a>

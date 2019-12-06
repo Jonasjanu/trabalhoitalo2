@@ -3,14 +3,13 @@
  // Criando Conexão
 include 'conn.php';
 
-$curso= $_POST['curso'];
+//$curso=$_POST['curso'];
 $disciplina =$_POST['disciplina'];
 $nome_professor=$_POST['nome_professor'];
 $vagas=$_POST['vagas'];
-echo $curso,"<br>",$a,"<br>",$b,"<br>",$c;
 
 // Create connection
-//$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

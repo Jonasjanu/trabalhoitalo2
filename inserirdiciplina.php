@@ -1,3 +1,4 @@
+session_start();
 <?php
 
  // Criando Conexão
@@ -15,8 +16,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO disciplina( curso,disciplina,  nome_professor, vagas)
-		 VALUES  ('$curso',
+$sql = "INSERT INTO disciplina( curso,disciplina,  nome_professor, vagas
+		 VALUES  '$curso',
 		 '$disciplina',
 			'$nome_professor',
 			'$vagas')";

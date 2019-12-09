@@ -1,3 +1,4 @@
+session_start();
 <?php
 
  // Criando Conexão
@@ -10,13 +11,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO aluno(nome_completo, matricula, e_mail, periodo, telefone, curso, ano)
+$sql = "INSERT INTO aluno(nome_completo, matricula, e_mail, periodo, telefone, ano)
 values ('$_POST[nome_completo]',
 			'$_POST[matricula]',
 			'$_POST[e_mail]',
 			'$_POST[periodo]',
 			'$_POST[telefone]',
-			'$_POST[curso]',
 			'$_POST[ano]')";
 
 

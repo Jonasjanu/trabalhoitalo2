@@ -59,7 +59,7 @@
 
 
 
-$sql = "SELECT d.nome as 'disciplina', p.nome as 'professor', c.nome as curso , d.vagas as 'vagas' , i.fk_disciplina_codigo, d.codigo, i.fk_curso_codigo, c.codigo FROM disciplina d ,professor p,curso c , professor_disciplina pd WHERE i.fk_aluno_codigo = a.codigo and i.fk_situacao_codigo = s.codigo and i.fk_disciplina_codigo = d.codigo and i.fk_curso_codigo = c.codigo";
+$sql = "SELECT d.nome as 'disciplina', p.nome as 'professor', c.nome as curso, d.vagas, i.fk_disciplina_codigo, d.codigo as 'disc_cod', p.codigo, i.fk_curso_codigo, c.codigo, s.codigo, a.codigo FROM disciplina d, professor p ,curso c, inscricao i, aluno a, situacao s WHERE i.fk_aluno_codigo = a.codigo and i.fk_situacao_codigo = s.codigo and i.fk_disciplina_codigo = d.codigo and i.fk_curso_codigo = c.codigo";
 
 
 //--------------Listando dados--------------------------
@@ -71,12 +71,12 @@ if ($result->num_rows > 0) {
         echo "<tr>
                       
                       <td>". $row["disciplina"]."</td>
-                      <td>". $row["nome_professor"]. "
+                      <td>". $row["professor"]. "
                       <td>" .$row["curso"]."</td>
                       <td>" . $row["vagas"].".</td>
                    
 
-                    <td><a href='edisciplina.php' class='btn btn-warning btn-circle'>
+                    <td><a href='edisciplina.php' class='btn btn-warning btn-circle' id='$row[disc_cod]'>
                     <i class='fas fa-edit'></i>
                   </a>
 
@@ -142,7 +142,7 @@ if ($result->num_rows > 0) {
                       <td>" . $row["e_mail"].".</td>
                    
 
-                    <td><a href='eprofessor.php' class='btn btn-warning btn-circle'>
+                    <td><a href='eprofessor.php' class='btn btn-warning btn-circle' id='$row[codigo]'>
                     <i class='fas fa-edit'></i>
                   </a>
 

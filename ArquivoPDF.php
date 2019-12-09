@@ -1,6 +1,6 @@
 <?php
 	include ('FPDF/fpdf.php');
-
+session_start();
 	$pagina = 
 		"<html>
 			<body>

@@ -1,41 +1,71 @@
 Programação Orientada a Objeto
-Banco dBanco de dados
-Manutenção de compuManutenção de computadores
-Desenvolvimento Web-FrDesenvolvimento Web-Front Endvalue=
-Inglês InstrInglês Instrumental
-Introdução a ComIntrodução a Computação
-Introdução a EletrIntrodução a Eletricidadevalue
-Lógica e Linguagem de ProgLógica e Linguagem de Programação
-Matemática DMatemática Discretavalue
-Redes de compuRedes de computadores
-Sistemas OperacionisSistemas Operacionis Livres
-Segurança dSegurança de Redes
-Empreendorismo
-Sistemas OperSistemas Operacionis
-Ètica e Relações Ètica e Relações Humanas
-Português Instrumental
+
 Banco de dados
-Desenvolvimento Web-B
+
+Manutenção de compuManutenção de computadores
+
+Desenvolvimento Web-FrDesenvolvimento Web-Front
+
+Inglês InstrInglês Instrumental
+
+Introdução a ComIntrodução a Computação
+
+Introdução a EletrIntrodução 
+
+Lógica e Linguagem de ProgLógica e Linguagem de Programação
+
+Matemática DMatemática Discreta
+
+Redes de compuRedes de computadores
+
+Sistemas OperacionisSistemas Operacionis Livres
+
+Segurança dSegurança de Redes
+
+Empreendorismo
+
+Sistemas OperSistemas Operacionis
+
+Ètica e Relações Ètica e Relações Humanas
+
+Português Instrumental
+
 Desenvolvimento Web-Back End
-	    Análise e Projeto de Sistemas
-	    Banco de dadosvalue="Banco dBanco de dados
-	    História da EHistória da Educação
-		Fundamentos Sócio-Filosóficos da EFundamentos Sócio-Filosóficos da Educação
-		Biologia Biologia Celular
-		QuímicQuímica geral
-		Matemática aMatemática aplicada
-		Psicologia do DesenvolvPsicologia do Desenvolvimento 
-		Política e Gestão EducaPolítica e Gestão Educacional 
-		Embriologia e Histologia Animal ComBiologia Celular
-		Biologia Embriologia e Histologia Animal Comparada 
-		Princípios de Sistemática e TaxPrincípios de Sistemática e Taxonomia 
-		BioestatBioestatística 
-		Química OQuímica Orgânica
-		Psicologia da AprenPsicologia da Aprendizagem
-		Zoologia de InvertebZoologia de Invertebrados I
-		Botânica de CriptBotânica de Criptógamas 
-		BioBioquímicavalue="Física para Ciências BiolFísica para Ciências Biológicas 
-		Metodologia do Trabalho CieMetodologia do Trabalho Científico
+
+Análise e Projeto de Sistemas
+
+Banco dBanco de dados
+
+História da Educação
+
+Fundamentos Sócio-Filosóficos da Educação
+
+Biologia Biologia Celular
+
+Química geral
+
+Matemática aplicada
+
+Psicologia do Desenvolvimento 
+
+Política e Gestão Educacional
+
+Biologia Embriologia e Histologia Animal Comparada
+
+Princípios de Sistemática e Taxonomia 
+
+Bioestatística
+
+Química Orgânica
+
+Psicologia da Aprendizagem
+		
+Zoologia de Invertebrados I
+
+Botânica de Criptógamas 
+
+Física para Ciências Biológicas 
+	Metodologia do Trabalho CieMetodologia do Trabalho Científico
 		Didática EducaDidática Educacional
 		Zoologia de InvertebraZoologia de Invertebrados II 
 		Botânica de FanerBotânica de Fanerógamas

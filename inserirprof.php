@@ -1,14 +1,16 @@
-session_start();
 <?php
+
+session_start();
+
 
  // Criando Conexão
 include 'conn.php';
 
 
-$nome= $_POST['nome'];
+/*$nome= $_POST['nome'] ;
 $siape =$_POST['siape'];
 $telefone=$_POST['telefone'];
-$e_mail=$_POST['e_mail'];
+$e_mail=$_POST['e_mail'];*/
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -18,10 +20,12 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO professor(nome, telefone, siape, e_mail, )VALUES  
-			('$nome',
-			'$telefone',
-			'$siape',
-			'$e_mail',)";
+			
+
+			('$_POST[nome]',
+			'$_POST[telefone]',
+			'$_POST[siape]',
+			'$_POST[e_mail]',)";
 
 
 if ($conn->query($sql) === TRUE) {
@@ -32,3 +36,16 @@ if ($conn->query($sql) === TRUE) {
 
 
 ?>
+
+<!--INSERT INTO `professor`(`nome`, `telefone`, `siape`, `e_mail`, `codigo`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])
+
+/*('$nome',
+
+/*$nome= $_POST['nome'] ;
+$siape =$_POST['siape'];
+$telefone=$_POST['telefone'];
+$e_mail=$_POST['e_mail'];*/
+
+			'$telefone',
+			'$siape',
+			'$e_mail',);*/

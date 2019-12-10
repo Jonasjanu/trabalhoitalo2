@@ -1,10 +1,14 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang='en'>
-session_start();
 
 <?php include 'template/cabecalho.php' ?>
 <?php include 'template/menu-lateral.php' ?>
-
+<?php $_SESSION["prof_id"] = $_GET["id"]; ?>
 <!-- Content Wrapper -->
 <div id='content-wrapper' class='d-flex flex-column'>
 
@@ -28,12 +32,37 @@ session_start();
         <div class="container">
           <div class="card card-register mx-auto mt-5">
             
+
+ <?php   include 'conn.php';
+
+//--------------Listando dados--------------------------
+$sql = "SELECT * FROM professor where codigo =$_SESSION[prof_id]";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+       $nome = $row["nome"];
+      $siape = $row["siape"];
+        $tel = $row["telefone"];
+        $email = $row["e_mail"];
+                  
+    }
+                  
+      } else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
+
+
             <div class="card-body">
               <form action="updateprof.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="nome">Nome completo</label>
-                    <input type="text" id="nome" name="nome" class="form-control"  placeholder="Nome completo" required="required">
+                    <input type="text" id="nome" name="nome" class="form-control" value="<?php echo $nome; ?>"  required="required">
 
                   </div>
                 </div>
@@ -43,14 +72,14 @@ session_start();
                       <div class="form-label-group">
                         <label for="siape">SIAPE</label>
                         <input type="number" id="siape"
-                        name="siape" class="form-control" placeholder="siape" required="required">
+                        name="siape" class="form-control"  value="<?php echo $siape; ?>" required="required">
 
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="telefone">Telefone</label>
-                        <input type="number" id="telefone" name="telefone" class="form-control" placeholder="Telefone"  required="required">
+                        <input type="number" id="telefone" name="telefone" class="form-control"  value="<?php echo $tel; ?>"   required="required">
 
                       </div>
                     </div>
@@ -61,7 +90,7 @@ session_start();
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="e_mail">Email</label>
-                    <input type="email" id="e_mail" name="e_mail" class="form-control" placeholder="Email"  required="required">
+                    <input type="email" id="e_mail" name="e_mail" class="form-control"  value="<?php echo $email; ?>"  required="required">
 
                   </div>
                 </div>

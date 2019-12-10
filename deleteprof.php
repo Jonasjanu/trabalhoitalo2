@@ -1,21 +1,16 @@
-<?php 
-	session_start();
-	 
-	
-	$_SESSION["acao"];
-	echo $_SESSION["acao"]=$_GET['acao'];
-	echo $_SESSION["id"]=$_GET['id'];
-	print_r($_SESSION);
+
+
+session_start();
+<?php
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-if($_SESSION["acao"]==1){
-	echo "ENTROU NO IF PARA DELETAR";
-	//echo $_SESSION["acao"] . $_SESSION
-		$sql = "DELETE FROM usuario WHERE id=$_SESSION[id]";
+
+// sql to delete a record
+$sql = "DELETE FROM MyGuests WHERE id=3";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";

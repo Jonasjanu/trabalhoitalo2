@@ -1,5 +1,5 @@
-session_start();
 <?php
+session_start();
 
  // Criando Conexão
 include 'conn.php';

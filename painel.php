@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-  
+  <?php
+// Start the session
+session_start();
+?>
  <?php include 'template/cabecalho.php' ?>
  <?php include 'template/menu-lateral.php' ?>
 
@@ -55,6 +58,7 @@
 
                   <tbody charset=utf-8>
 <?php   include 'conn.php';
+
 
 
 
@@ -142,11 +146,11 @@ if ($result->num_rows > 0) {
                       <td>" . $row["e_mail"].".</td>
                    
 
-                    <td><a href='eprofessor.php' class='btn btn-warning btn-circle' id='$row[codigo]'>
+                    <td><a href='eprofessor.php?id=$row[codigo]' class='btn btn-warning btn-circle' id='$row[codigo]'>
                     <i class='fas fa-edit'></i>
                   </a>
 
-                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
+                  <a class='btn btn-danger btn-circle' href='deleteprof.php' data-toggle='modal' data-target='#deleteModal'>
                     <i class='fas fa-trash'></i>
                   </a></td> </tr>";
     }

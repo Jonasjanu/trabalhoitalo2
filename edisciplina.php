@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang='en'>
+<?php
+// Start the session
 session_start();
+?>;
 
 <?php include 'template/cabecalho.php' ?>
 <?php include 'template/menu-lateral.php' ?>

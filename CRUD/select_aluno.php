@@ -1,7 +1,4 @@
 <?php
-session_start();
-
- // Criando Conexão
 include 'conn.php';
 
 //--------------Listando dados--------------------------

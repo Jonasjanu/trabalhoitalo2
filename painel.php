@@ -42,6 +42,7 @@ session_start();
                       <th>Professor</th>
                       <th>Curso</th>
                       <th>Vagas</th>
+                      <th>Situação</th>
                       <th>Ação</th>
                     </tr>
                   </thead>
@@ -51,20 +52,16 @@ session_start();
                       <th>Professor</th>
                       <th>Curso</th>
                       <th>Vagas</th>
+                      <th>Situação</th>
                       <th>Ação</th>
                     </tr>
                   </tfoot>
 
 
                   <tbody charset=utf-8>
-<?php   include 'conn.php';
+<?php   include 'CRUD/conn.php';
 
-
-
-
-
-$sql = "SELECT d.nome as 'disciplina', p.nome as 'professor', c.nome as curso, d.vagas, i.fk_disciplina_codigo, d.codigo as 'disc_cod', p.codigo, i.fk_curso_codigo, c.codigo, s.codigo, a.codigo FROM disciplina d, professor p ,curso c, inscricao i, aluno a, situacao s WHERE i.fk_aluno_codigo = a.codigo and i.fk_situacao_codigo = s.codigo and i.fk_disciplina_codigo = d.codigo and i.fk_curso_codigo = c.codigo";
-
+$sql = "SELECT o.codigo as 'cod', d.nome as 'disciplina', p.nome as 'professor', c.nome as 'curso', o.vagas, s.nome as 'situacao' FROM oferta o, situacao s, disciplina d, professor p, curso c WHERE o.fk_situacao_codigo = s.codigo and o.fk_disciplina_codigo = d.codigo and o.fk_professor_codigo = p.codigo and d.fk_curso_codigo = c.codigo";
 
 //--------------Listando dados--------------------------
 $result = $conn->query($sql);
@@ -77,10 +74,11 @@ if ($result->num_rows > 0) {
                       <td>". $row["disciplina"]."</td>
                       <td>". $row["professor"]. "
                       <td>" .$row["curso"]."</td>
-                      <td>" . $row["vagas"].".</td>
+                      <td>" . $row["vagas"]."</td>
+                      <td>" . $row["situacao"]."</td>
                    
 
-                    <td><a href='edisciplina.php' class='btn btn-warning btn-circle' id='$row[disc_cod]'>
+                    <td><a href='edisciplina.php?cod=$row[cod]' class='btn btn-warning btn-circle' id='$row[cod]'>
                     <i class='fas fa-edit'></i>
                   </a>
 
@@ -117,6 +115,7 @@ $conn->close();
                       <th>SIAPE</th>
                       <th>Telefone</th>
                       <th>E-mail</th>
+                      
                       <th>Ação</th>
                     </tr>
                   </thead>
@@ -126,11 +125,12 @@ $conn->close();
                       <th>SIAPE</th>
                       <th>Telefone</th>
                       <th>E-mail</th>
+                     
                       <th>Ação</th>
                     </tr>
                   </tfoot>
                   <tbody>
-                    <?php   include 'conn.php';
+                    <?php   include 'CRUD/conn.php';
 
 //--------------Listando dados--------------------------
 $sql = "SELECT * FROM professor";

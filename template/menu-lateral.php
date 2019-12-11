@@ -55,7 +55,7 @@ echo "
 
       <!-- Nav Item - Validar -->
       <li class='nav-item'>
-        <a class='nav-link' href='validar.php'>
+        <a class='nav-link' href='validar_inscricao.php'>
           <i class='fas fa-fw fa-chart-area'></i>
           <span>Validar Inscrição</span></a>
       </li>

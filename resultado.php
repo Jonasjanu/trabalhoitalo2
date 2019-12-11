@@ -32,7 +32,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Nome</th>
+                      <th>Aluno</th>
                       <th>Matricula</th>
                       <th>Curso</th>
                       <th>Disciplina</th>
@@ -42,7 +42,7 @@
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Name</th>
+                      <th>Aluno</th>
                       <th>Matricula</th>
                       <th>Curso</th>
                       <th>Disciplina</th>
@@ -50,13 +50,36 @@
                     </tr>
                   </tfoot>
                    <tbody>
-                 <?php   include 'conn.php';
+                 <?php   include 'CRUD/conn.php';
 
 
 
 //--------------Listando dados-------------------------
 
-$sql = "SELECT  c.nome as 'curso', a.matricula as 'matricula', a.nome_completo as 'aluno', d.nome as 'disciplina', s.nome as 'situacao',  i.fk_situacao_codigo, i.fk_aluno_codigo, a.codigo, i.fk_situacao_codigo, s.codigo, i.fk_disciplina_codigo, d.codigo, i.fk_curso_codigo, c.codigo FROM curso c, inscricao i, disciplina d, aluno a, situacao s WHERE i.fk_aluno_codigo = a.codigo and i.fk_situacao_codigo = s.codigo and i.fk_disciplina_codigo = d.codigo and i.fk_curso_codigo = c.codigo";
+$sql = "SELECT  
+        c.nome as 'curso', 
+        a.matricula as 'matricula', 
+        a.nome_completo as 'aluno', 
+        d.nome as 'disciplina', 
+        s.nome as 'situacao',  
+        i.fk_situacao_codigo, 
+        i.fk_aluno_codigo, 
+        a.codigo, 
+        i.fk_situacao_codigo, 
+        s.codigo, 
+        i.fk_disciplina_codigo, 
+        d.codigo, 
+        c.codigo,
+        d.fk_curso_codigo 
+FROM  curso c, 
+      inscricao i, 
+      disciplina d, 
+      aluno a, 
+      situacao s 
+WHERE i.fk_aluno_codigo = a.codigo and 
+      i.fk_situacao_codigo = s.codigo and 
+      i.fk_disciplina_codigo = d.codigo and 
+      d.fk_curso_codigo = c.codigo";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

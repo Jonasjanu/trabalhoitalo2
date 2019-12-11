@@ -1,15 +1,6 @@
 <?php
 
-session_start();
-
 include 'conn.php';
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 $nome = ($_POST['nome']) ? $_POST['nome'] : '';
 $nome_professor  = ($_POST['nome_professor']) ? $_POST['nome_professor'] : '';

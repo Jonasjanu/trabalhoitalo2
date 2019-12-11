@@ -31,7 +31,7 @@ session_start();
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-              <form action="inserirprof.php" method="Post">
+              <form action="CRUD/insert_professor.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="nome">Nome completo</label>

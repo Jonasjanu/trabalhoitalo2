@@ -33,7 +33,7 @@ session_start();
           <div class="card card-register mx-auto mt-5">
             
             <div class="card-body">
-             <form action="inserirdiciplina.php" method="Post">
+             <form action="CRUD/insert_disciplina.php" method="Post">
                 <div class="form-group">
                   <div class="form-label-group">
                   <label for="curso">Curso:</label>
@@ -57,7 +57,7 @@ session_start();
                   <div class="form-row">
                     <div class="col-md-6">
                       <div class="form-label-group">
-                      <label for="nome_professor">Nome do Professor</label>
+                      <label for="nome">Nome do Professor</label>
                       <select name="disciplina" class="form-control" required="required" autofocus="autofocus">
                       <?php include 'CRUD/select_carrega_professor.php'; ?>
                     </select>

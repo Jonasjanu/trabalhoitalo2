@@ -14,7 +14,7 @@ echo "
         <div class='modal-body'>Selecione 'Confirmar' abaixo se você deseja deletar o item.</div>
         <div class='modal-footer'>
           <button class='btn btn-secondary' type='button' data-dismiss='modal'>Cancela</button>
-          <a class='btn btn-danger' href='#'>Confirmar</a>
+          <a class='btn btn-danger' href='delete_oferta.php'>Confirmar</a>
         </div>
       </div>
     </div>

@@ -1,20 +1,15 @@
 <?php
-include 'conn.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'conn.php';
 
 $nome = ($_POST['nome']) ? $_POST['nome'] : '';
 $nome_professor  = ($_POST['nome_professor']) ? $_POST['nome_professor'] : '';
 $periodo  = ($_POST['periodo']) ? $_POST['periodo'] : '';
+$id = $_POST["id"];
 
 
-
-$sql = "UPDATE disciplina SET ,`nome`=[$nome],`nome_professor`=[$nome_professor],`periodo`=[$periodo] WHERE ";
+$sql = "UPDATE disciplina SET ,nome = '".$nome."', nome_professor = '".$nome_professor."',periodo = '".$periodo."'
+            where codigo = ".$id; ;
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
@@ -25,3 +20,5 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 ?>
 
+ 
+    

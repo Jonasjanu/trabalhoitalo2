@@ -27,11 +27,24 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `administrador`
 --
+DROP TABLE IF EXISTS oferta;
+DROP TABLE IF EXISTS inscricao;
+DROP TABLE IF EXISTS professor_disciplina;
+DROP TABLE IF EXISTS situacao;
+DROP TABLE IF EXISTS professor;
+DROP TABLE IF EXISTS disciplina;
+DROP TABLE IF EXISTS curso;
+DROP TABLE IF EXISTS aluno;
+DROP TABLE IF EXISTS administrador;
+
+
+
 
 CREATE TABLE `administrador` (
   `senha` int(50) NOT NULL,
   `login` varchar(100) NOT NULL,
-  `codigo` int(11) NOT NULL
+  `codigo` int PRIMARY KEY AUTO_INCREMENT,
+  UNIQUE (login)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -46,13 +59,13 @@ CREATE TABLE `administrador` (
 --
 
 CREATE TABLE `aluno` (
-  `codigo` int(11) NOT NULL,
-  `periodo` int(3) NOT NULL,
+  `codigo`  int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `periodo` int(1) NOT NULL,
   `nome_completo` varchar(250) NOT NULL,
-  `matricula` int(10) NOT NULL,
-  `telefone` int(10) NOT NULL,
-  `ano` int(10) NOT NULL,
-  `e_mail` varchar(50) NOT NULL
+  `matricula` int(20) NOT NULL,
+  `telefone` varchar(15) DEFAULT 0,
+  `e_mail` varchar(50) NOT NULL,
+  UNIQUE (matricula)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -63,8 +76,9 @@ CREATE TABLE `aluno` (
 
 CREATE TABLE `curso` (
   `nome` varchar(50) NOT NULL,
-  `codigo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `codigo`  int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  UNIQUE (nome)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 
@@ -76,31 +90,12 @@ CREATE TABLE `curso` (
 
 CREATE TABLE `disciplina` (
   `nome` varchar(50) NOT NULL,
-  `codigo` int(11) NOT NULL,
-  `fk_curso_codigo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `codigo`  int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `fk_curso_codigo` int NOT NULL,
+  FOREIGN KEY (fk_curso_codigo) REFERENCES curso(codigo),
+  UNIQUE (nome)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `inscricao`
---
-
-CREATE TABLE `inscricao` (
-  `codigo` int(11) NOT NULL,
-  `fk_aluno_codigo` int(11) NOT NULL,
-  `fk_disciplina_codigo` int(11) NOT NULL,
-  `fk_curso_codigo` int(11) NOT NULL,
-  `fk_situacao_codigo` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `inscricao`
--
-
--- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `professor`
@@ -111,10 +106,23 @@ CREATE TABLE `professor` (
   `telefone` int(15) DEFAULT NULL,
   `siape` int(10) NOT NULL,
   `e_mail` varchar(250) NOT NULL,
-  `codigo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  UNIQUE (siape)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+
+
+--
+-- Estrutura da tabela `situacao`
+--
+
+CREATE TABLE `situacao` (
+  `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  UNIQUE (nome)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- --------------------------------------------------------
 
@@ -123,164 +131,47 @@ CREATE TABLE `professor` (
 --
 
 CREATE TABLE `professor_disciplina` (
-  `codigo` int(11) NOT NULL,
-  `fk_professor_codigo` int(11) DEFAULT NULL,
-  `fk_disciplina_codigo` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `fk_professor_codigo` int DEFAULT NULL,
+  `fk_disciplina_codigo` int DEFAULT NULL,
+  FOREIGN KEY (fk_professor_codigo) REFERENCES professor(codigo),
+  FOREIGN KEY (fk_disciplina_codigo) REFERENCES disciplina(codigo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `professor_disciplina`
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `situacao`
---
-
-CREATE TABLE `situacao` (
-  `codigo` int(11) NOT NULL,
-  `nome` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
+ --  FOREIGN KEY (fk_cidade_id) REFERENCES cidade(id),
+ 
 --
 -- Índices para tabelas despejadas
 --
-
 --
--- Índices para tabela `administrador`
---
-ALTER TABLE `administrador`
-  ADD PRIMARY KEY (`codigo`);
-
---
--- Índices para tabela `aluno`
---
-ALTER TABLE `aluno`
-  ADD PRIMARY KEY (`codigo`);
-
---
--- Índices para tabela `curso`
---
-ALTER TABLE `curso`
-  ADD PRIMARY KEY (`codigo`);
-
---
--- Índices para tabela `disciplina`
---
-ALTER TABLE `disciplina`
-  ADD PRIMARY KEY (`codigo`),
-  ADD KEY `fk_curso_codigo` (`fk_curso_codigo`);
-
---
--- Índices para tabela `inscricao`
---
-ALTER TABLE `inscricao`
-  ADD PRIMARY KEY (`codigo`),
-  ADD KEY `fk_situacao_codigo` (`fk_situacao_codigo`),
-  ADD KEY `fk_curso_codigo` (`fk_curso_codigo`),
-  ADD KEY `fk_disciplina_codigo` (`fk_disciplina_codigo`),
-  ADD KEY `fk_aluno_codigo` (`fk_aluno_codigo`);
-
---
--- Índices para tabela `professor`
---
-ALTER TABLE `professor`
-  ADD PRIMARY KEY (`codigo`);
-
---
--- Índices para tabela `professor_disciplina`
---
-ALTER TABLE `professor_disciplina`
-  ADD PRIMARY KEY (`codigo`),
-  ADD KEY `fk_professor_codigo` (`fk_professor_codigo`),
-  ADD KEY `fk_disciplina_codigo` (`fk_disciplina_codigo`);
-
---
--- Índices para tabela `situacao`
---
-ALTER TABLE `situacao`
-  ADD PRIMARY KEY (`codigo`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
+-- Estrutura da tabela `inscricao`
 --
 
---
--- AUTO_INCREMENT de tabela `administrador`
---
-ALTER TABLE `administrador`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+CREATE TABLE `inscricao` (
+  `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `fk_aluno_codigo` int NOT NULL,
+  `fk_disciplina_codigo` int NOT NULL,
+  `fk_situacao_codigo` int DEFAULT 1,
+  `ano` int(4) DEFAULT 0,
+  FOREIGN KEY (fk_aluno_codigo) REFERENCES aluno(codigo),
+  FOREIGN KEY (fk_disciplina_codigo) REFERENCES disciplina(codigo),
+  FOREIGN KEY (fk_situacao_codigo) REFERENCES situacao(codigo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- AUTO_INCREMENT de tabela `aluno`
---
-ALTER TABLE `aluno`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+CREATE TABLE `oferta` (
+  `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `vagas` int(2) NOT NULL DEFAULT 0,
+  `fk_disciplina_codigo` int NOT NULL,
+  `fk_situacao_codigo` int NOT NULL,
+  `fk_professor_codigo` int NOT NULL,
+  FOREIGN KEY (fk_disciplina_codigo) REFERENCES disciplina(codigo),
+  FOREIGN KEY (fk_professor_codigo) REFERENCES professor(codigo),
+  FOREIGN KEY (fk_situacao_codigo) REFERENCES situacao(codigo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- AUTO_INCREMENT de tabela `curso`
---
-ALTER TABLE `curso`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT de tabela `disciplina`
---
-ALTER TABLE `disciplina`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT de tabela `inscricao`
---
-ALTER TABLE `inscricao`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT de tabela `professor`
---
-ALTER TABLE `professor`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de tabela `professor_disciplina`
---
-ALTER TABLE `professor_disciplina`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT de tabela `situacao`
---
-ALTER TABLE `situacao`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- Restrições para despejos de tabelas
---
-
---
--- Limitadores para a tabela `disciplina`
---
-ALTER TABLE `disciplina`
-  ADD CONSTRAINT `disciplina_ibfk_1` FOREIGN KEY (`fk_curso_codigo`) REFERENCES `curso` (`codigo`);
-
---
--- Limitadores para a tabela `inscricao`
---
-ALTER TABLE `inscricao`
-  ADD CONSTRAINT `inscricao_ibfk_1` FOREIGN KEY (`fk_situacao_codigo`) REFERENCES `situacao` (`codigo`),
-  ADD CONSTRAINT `inscricao_ibfk_2` FOREIGN KEY (`fk_curso_codigo`) REFERENCES `curso` (`codigo`),
-  ADD CONSTRAINT `inscricao_ibfk_3` FOREIGN KEY (`fk_disciplina_codigo`) REFERENCES `disciplina` (`codigo`),
-  ADD CONSTRAINT `inscricao_ibfk_4` FOREIGN KEY (`fk_aluno_codigo`) REFERENCES `aluno` (`codigo`);
-
---
--- Limitadores para a tabela `professor_disciplina`
---
-ALTER TABLE `professor_disciplina`
-  ADD CONSTRAINT `professor_disciplina_ibfk_1` FOREIGN KEY (`fk_professor_codigo`) REFERENCES `professor` (`codigo`),
-  ADD CONSTRAINT `professor_disciplina_ibfk_2` FOREIGN KEY (`fk_disciplina_codigo`) REFERENCES `disciplina` (`codigo`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

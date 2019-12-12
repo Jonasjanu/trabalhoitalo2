@@ -1,6 +1,11 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang='en'>
-  session_start();
+
  <?php include 'template/cabecalho.php' ?>
  <?php include 'template/menu-lateral.php' ?>
 
@@ -59,11 +64,11 @@
                   <tbody>
            
 
- // Criando Conexão
- <?php   include 'conn.php';
+ 
+ <?php   include 'CRUD/conn.php';
 
 //--------------Listando dados--------------------------
-$sql = "SELECT * FROM `inscricao` INNER JOIN disciplina ON fk_disciplina_codigo = disciplina.codigo INNER JOIN aluno ON fk_aluno_codigo = aluno.codigo ";
+$sql = "SELECT *, curso.nome as 'curso', situacao.nome as 'situacao', situacao.codigo as 'cod' FROM `inscricao` INNER JOIN disciplina ON fk_disciplina_codigo = disciplina.codigo INNER JOIN situacao ON inscricao.fk_situacao_codigo = situacao.codigo INNER JOIN curso ON disciplina.fk_curso_codigo = curso.codigo INNER JOIN aluno ON fk_aluno_codigo = aluno.codigo ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -74,7 +79,11 @@ if ($result->num_rows > 0) {
                       <td>". $row["matricula"]."</td>
                       <td>". $row["curso"]. "</td>
                       <td>" . $row["nome"].".</td>
-                      <td>" . $row["situacao"]. "</td>
+                      <td><select name='situacao' class='form-control' required='required' autofocus='autofocus'>
+                      <option value='$row[cod]'>$row[situacao]</option>";
+                      include 'CRUD/select_carrega_situacao.php'; 
+                    echo "  </select>            
+                      </td>
                       </tr>";
     }
                     

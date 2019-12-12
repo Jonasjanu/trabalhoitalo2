@@ -10,12 +10,12 @@ session_start();
 					<li>kelly@celke.com.br</li>
 					<li>atendimento@celke.com.br</li>
 				</ul>
-				<h4>http://www.celke.com.br</h5>
+				<h4></h5>
 			</body>
 		</html>
 		";
 
-$arquivo = "Cadastro01.pdf";
+$arquivo = "Cadastro.pdf";
 
 $mpdf = new FPDF();
 $mpdf->WriteHTML($pagina);

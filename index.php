@@ -30,6 +30,9 @@
           <!-- Page Heading -->
           
 <a href="Documentos/Monitoria_edital.pdf">Edital da Monitoria de 2019.2</a>
+<br><br>
+
+<a href="ajuda.html ">Central de Ajuda</a>
 
           <!-- PARTE PRINCIPAL DA PAGINA ONDE DEVE SER ADICIONADO O CONTEUDO-->
 

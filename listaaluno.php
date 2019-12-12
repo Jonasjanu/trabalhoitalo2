@@ -13,6 +13,7 @@ if ($result->num_rows > 0) {
 
         echo " - nome: " . $row["nome_completo"]."matricula: " . $row["matricula"]. "curso " . $row["curso"]. "disciplina " . $row["cod_disciplina"]. "situacao " . $row["situacao"]. "<br>";
 
+
     }
 } else {
     echo "0 results";

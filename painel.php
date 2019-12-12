@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
   
  <?php include 'template/cabecalho.php' ?>
  <?php include 'template/menu-lateral.php' ?>
@@ -8,7 +9,7 @@
     <div id='content-wrapper' class='d-flex flex-column'>
 
       <!-- Main Content -->
-      <div id='content'>
+      <div id='content' meta= charset=utf-8>
 
       <?php include 'template/menu-superior.php' ?>       
 
@@ -52,32 +53,46 @@
                   </tfoot>
 
 
-                  <tbody>
+                  <tbody charset=utf-8>
+<?php   include 'conn.php';
 
-                    <tr>
-                      <td>Banco de Dados</td>
-                      <td>Leandro de Fortaleza</td>
-                      <td>Técnico em Informática</td>                      
-                      <td>2</td>
-                      <td> <a href="edisciplina.php" class="btn btn-warning btn-circle">
-                    <i class="fas fa-edit"></i>
+
+
+
+$sql = "SELECT d.nome as 'disciplina', p.nome as 'professor', c.nome as curso, d.vagas, i.fk_disciplina_codigo, d.codigo as 'disc_cod', p.codigo, i.fk_curso_codigo, c.codigo, s.codigo, a.codigo FROM disciplina d, professor p ,curso c, inscricao i, aluno a, situacao s WHERE i.fk_aluno_codigo = a.codigo and i.fk_situacao_codigo = s.codigo and i.fk_disciplina_codigo = d.codigo and i.fk_curso_codigo = c.codigo";
+
+
+//--------------Listando dados--------------------------
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>
+                      
+                      <td>". $row["disciplina"]."</td>
+                      <td>". $row["professor"]. "
+                      <td>" .$row["curso"]."</td>
+                      <td>" . $row["vagas"].".</td>
+                   
+
+                    <td><a href='edisciplina.php' class='btn btn-warning btn-circle' id='$row[disc_cod]'>
+                    <i class='fas fa-edit'></i>
                   </a>
+
                   <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
-                    <i class="fas fa-trash"></i>
-                  </a></td></td>
-                    </tr>
-                    <tr>
-                      <td>Redes</td>
-                      <td>Sávio de Tauá</td>
-                      <td>Técnico em Informática</td>                      
-                      <td>1</td>
-                      <td><a href="edisciplina.php" class="btn btn-warning btn-circle">
-                    <i class="fas fa-edit"></i>
-                  </a>
-                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#deleteModal'>
-                    <i class="fas fa-trash"></i>
-                  </a></td></td>
-                    </tr>                  
+                    <i class='fas fa-trash'></i>
+                  </a></td> </tr>";
+    }
+                  
+      } else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
+
+                                
                   </tbody>
                 </table>
               </div>
@@ -127,7 +142,7 @@ if ($result->num_rows > 0) {
                       <td>" . $row["e_mail"].".</td>
                    
 
-                    <td><a href='eprofessor.php' class='btn btn-warning btn-circle'>
+                    <td><a href='eprofessor.php' class='btn btn-warning btn-circle' id='$row[codigo]'>
                     <i class='fas fa-edit'></i>
                   </a>
 

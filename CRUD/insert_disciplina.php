@@ -4,13 +4,11 @@ include 'conn.php';
 
 $curso=$_POST['curso']; 
 $disciplina =$_POST['disciplina'];
-$nomeprofessor =$_POST['nome'];
 $vagas=$_POST['vagas'];
 
-$sql = "INSERT INTO disciplina( curso,disciplina,  nome, vagas
-		 VALUES  '$curso',
+$sql = "INSERT INTO oferta( curso,disciplina,  vagas)
+		 VALUES  ('$curso',
 		 '$disciplina',
-			'$nome',
 			'$vagas')";
 
 

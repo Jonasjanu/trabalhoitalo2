@@ -106,6 +106,7 @@ CREATE TABLE `professor` (
   `telefone` int(15) DEFAULT NULL,
   `siape` int(10) NOT NULL,
   `e_mail` varchar(250) NOT NULL,
+  `flag` boolean NOT NULL,
   `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   UNIQUE (siape)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -87,9 +87,9 @@ INSERT INTO `aluno` (`periodo`, `nome_completo`, `matricula`, `telefone`, `e_mai
 -- Extraindo dados da tabela `professor`
 --
 
-INSERT INTO `professor` (`nome`, `telefone`, `siape`, `e_mail`) VALUES
-('italo arruda', 90122266, 1111110, 'italo.arruda@ifce.edu.br'),
-('savio oliveira', 611116555, 22222220, 'savio.oliveira@gmail.com');
+INSERT INTO `professor` (`nome`, `telefone`, `siape`, `e_mail`, `flag`) VALUES
+('italo arruda', 90122266, 1111110, 'italo.arruda@ifce.edu.br', 1),
+('savio oliveira', 611116555, 22222220, 'savio.oliveira@gmail.com', 1);
 
 
 --

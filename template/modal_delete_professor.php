@@ -1,3 +1,12 @@
+ 
+<?php
+
+session_start()
+
+// Start the session
+
+?>
+
  <?php
 
 echo "
@@ -14,7 +23,7 @@ echo "
         <div class='modal-body'>Selecione 'Confirmar' abaixo se você deseja deletar o item.</div>
         <div class='modal-footer'>
           <button class='btn btn-secondary' type='button' data-dismiss='modal'>Cancela</button>
-          <a class='btn btn-danger' href='CRUD/delete_professor.php'>Confirmar</a>
+          <a class='btn btn-danger' href='CRUD/delete_professor.php?id=$ [codigo]'>Confirmar</a>
         </div>
       </div>
     </div>
@@ -22,4 +31,4 @@ echo "
 
 
 
-";
+" // fazer com que  o modal puxe o id;

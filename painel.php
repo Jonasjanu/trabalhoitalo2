@@ -150,7 +150,7 @@ if ($result->num_rows > 0) {
                     <i class='fas fa-edit'></i>
                   </a>
 
-                  <a class='btn btn-danger btn-circle' href='#' data-toggle='modal' data-target='#professorModal'>
+                  <a class='btn btn-danger btn-circle' id='$row[codigo]' name='$row[codigo]' href='#?id=$row[codigo]' data-toggle='modal' data-target='#professorModal'>
                     <i class='fas fa-trash'></i>
                   </a></td> </tr>";
     }

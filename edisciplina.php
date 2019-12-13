@@ -53,6 +53,16 @@ session_start();
                 </div>
 
                 <div class="form-group">
+                  <div class="form-label-group">
+                    <label for="situacao">Situacao:</label>
+                    <select name="situacao" class="form-control" required="required" autofocus="autofocus">
+                      <?php include 'CRUD/select_carrega_situacao2.php'; // fazer o select da situacão que não esta funcioando ?> 
+                    </select>
+
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <div class="form-row">
                     <div class="col-md-6">
                       <div class="form-label-group">

@@ -2,14 +2,16 @@
 
 include 'conn.php';
 
-$nome = ($_POST['nome']) ? $_POST['nome'] : '';
-$nome_professor  = ($_POST['nome_professor']) ? $_POST['nome_professor'] : '';
-$periodo  = ($_POST['periodo']) ? $_POST['periodo'] : '';
+
+$nome_professor  = $_POST['nome_professor'];
+$vagas  = $_POST['vagas'];
 $id = $_POST["id"];
+$situacao  = $_POST['situacao'];
 
-
-$sql = "UPDATE disciplina SET ,nome = '".$nome."', nome_professor = '".$nome_professor."',periodo = '".$periodo."'
-            where codigo = ".$id; ;
+$sql = "UPDATE oferta SET fk_professor_codigo = '$nome_professor', vagas = '$vagas', fk_situacao_codigo = '$situacao'
+            where codigo = '$id'";// fazer com que o id seja reconhecido e o upadete seja feito so de um resistro
+ 
+if ($conn->query($sql) === TRUE) {
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";

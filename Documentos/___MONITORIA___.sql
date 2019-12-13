@@ -106,6 +106,7 @@ CREATE TABLE `professor` (
   `telefone` int(15) DEFAULT NULL,
   `siape` int(10) NOT NULL,
   `e_mail` varchar(250) NOT NULL,
+  `flag` boolean NOT NULL,
   `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   UNIQUE (siape)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -166,6 +167,7 @@ CREATE TABLE `inscricao` (
 CREATE TABLE `oferta` (
   `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `vagas` int(2) NOT NULL DEFAULT 0,
+  `flag` boolean NOT NULL,
   `fk_disciplina_codigo` int NOT NULL,
   `fk_situacao_codigo` int NOT NULL,
   `fk_professor_codigo` int NOT NULL,

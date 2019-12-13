@@ -53,25 +53,32 @@ session_start();
                 </div>
 
                 <div class="form-group">
+                  <div class="form-label-group">
+                    <label for="situacao">Situacao:</label>
+                    <select name="situacao" class="form-control" required="required" autofocus="autofocus">
+                      <?php include 'CRUD/select_carrega_situacao2.php'; // fazer o select da situacão que não esta funcioando ?> 
+                    </select>
+
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <div class="form-row">
                     <div class="col-md-6">
                       <div class="form-label-group">
-                      <label for="firstName">Nome do Professor</label>
-                    <input type="text" value="Leandro de Fortaleza" id="firstName" class="form-control" placeholder="Nome completo" required="required">
+                      <label for="nome">Nome do Professor</label>
+                      <select name="nome" class="form-control" required="required" autofocus="autofocus">
+                      <?php include 'CRUD/select_carrega_professor.php'; ?>
+                      </select>
+
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-label-group">
                         <label for="avaliacao">Vagas:</label>
                         <select name="periodo" class="form-control" required="required" autofocus="autofocus">
-                        <option value="1">1</option>
-                        <option value="2" selected>2</option>
-                        <option value="3">3</option> 
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
+                          <?php include 'CRUD/select_carrega_oferta.php'; ?>
+                     
                       </select>
                       </div>
                     </div>

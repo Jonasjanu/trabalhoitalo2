@@ -1,3 +1,5 @@
+
+
 <?php
 
 include 'conn.php'; // Chama a conexao com o banco de dados
@@ -10,7 +12,9 @@ include 'conn.php'; // Chama a conexao com o banco de dados
 
 
 
-$sql = "UPDATE professor SET nome='nome',telefone='telefone',siape='siape', e_mail='e_mail' WHERE 'prof_id'";
+$sql = "UPDATE professor SET nome='nome',telefone='telefone',siape='siape', e_mail='e_mail' WHERE 'codigo'";// fazer com que o id seja reconhecido e o upadete seja feito so de um resistro
+ 
+if ($conn->query($sql) === TRUE) {
 
 if ($conn->query($sql) === TRUE) {
 
@@ -21,5 +25,3 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-
-  

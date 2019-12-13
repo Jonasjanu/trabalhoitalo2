@@ -92,6 +92,7 @@ INSERT INTO `professor` (`nome`, `telefone`, `siape`, `e_mail`, `flag`) VALUES
 ('savio oliveira', 611116555, 22222220, 'savio.oliveira@gmail.com', 1);
 
 
+
 --
 -- Extraindo dados da tabela `professor_disciplina`
 --
@@ -129,14 +130,14 @@ INSERT INTO `inscricao` (`fk_aluno_codigo`, `fk_disciplina_codigo`, `fk_situacao
 (3, 19, 3, 2020),
 (4, 21, 4, 2019);
 
-INSERT INTO `oferta` (`vagas`, `fk_disciplina_codigo`, `fk_situacao_codigo`, `fk_professor_codigo`) VALUES
-(2, 2, 5, 1),
-(1, 4, 5, 1),
-(1, 6, 5, 2),
-(2, 8, 6, 2),
-(1, 10, 5, 2),
-(1, 12, 6, 2),
-(2, 14, 6, 1);
+INSERT INTO `oferta` (`vagas`, `fk_disciplina_codigo`, `fk_situacao_codigo`, `fk_professor_codigo`,`flag`) VALUES
+(2, 2, 5, 1,1),
+(1, 4, 5, 1,1),
+(1, 6, 5, 2,1),
+(2, 8, 6, 2,1),
+(1, 10, 5, 2,1),
+(1, 12, 6, 2,1),
+(2, 14, 6, 1,1);
 
 
 COMMIT;

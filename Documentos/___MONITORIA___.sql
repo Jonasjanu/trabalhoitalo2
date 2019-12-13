@@ -167,6 +167,7 @@ CREATE TABLE `inscricao` (
 CREATE TABLE `oferta` (
   `codigo` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `vagas` int(2) NOT NULL DEFAULT 0,
+  `flag` boolean NOT NULL,
   `fk_disciplina_codigo` int NOT NULL,
   `fk_situacao_codigo` int NOT NULL,
   `fk_professor_codigo` int NOT NULL,

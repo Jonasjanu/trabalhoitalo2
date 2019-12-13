@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<div class="text-center">
-                <a class="d-block small mt-3" href="index.php">Página Inicial</a>
-                
-              </div>
-
-              </body>
 
 
 <?php
@@ -36,10 +24,4 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-  <div class="text-center">
-                <a class="d-block small mt-3" href="index.php">Página Inicial</a>
-                
-              </div>
-
-              </body>
-</html>
+  <

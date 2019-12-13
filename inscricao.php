@@ -32,7 +32,7 @@ session_start();
         <div class="container">
           <div class="card card-register mx-auto mt-5">   
             <div class="card-body">
-              <form action="CRUD/insert_aluno.php" method="POST">
+              <form action="CRUD/emitir_pdf.php" method="POST">
                 <div class="form-group">
                   <div class="form-label-group">
                     <label for="Nome_Completo">Nome completo</label>
@@ -112,7 +112,7 @@ session_start();
                       <label for="ano">Já foi monitor (a) anteriormente?</label>
                       <div class="form-label-group">
                         <div class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" id="sim" name="situacao">
+                          <input type="radio" class="custom-control-input" id="sim" name="situacao" value="1">
                           <label class="custom-control-label" for="sim">SIM</label>
                         </div>
                       </div>
@@ -122,7 +122,7 @@ session_start();
                       </br>
                         <div class="custom-control custom-radio"> 
                           </br>
-                          <input type="radio" class="custom-control-input" id="nao" name="situacao" checked>
+                          <input type="radio" class="custom-control-input" id="nao" name="situacao" value="0" checked>
                           <label class="custom-control-label" for="nao">NÃO</label>
                         </div>
                       </div>
